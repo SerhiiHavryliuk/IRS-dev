@@ -1,0 +1,34 @@
+nav.h-menu-dd
+    input.h-menu-dd__mob-btn-check(id="h-menu-dd__show-menu" type="checkbox")
+    label.h-menu-dd__mob-btn(for="h-menu-dd__show-menu") &times;
+    ul.h-menu-dd__list
+        li.h-menu-dd__item: a(href="#").h-menu-dd__link Item 1
+        li.h-menu-dd__item: a(href="#").h-menu-dd__link Item 2 some longer
+        li.h-menu-dd__item
+            a(href="#").h-menu-dd__link Item with drop down
+            .h-menu-dd__layout-sub-menu
+                .h-menu-dd__layout-col
+                    ul
+                        li: a(href="#") Sub Item 1
+                        li: a(href="#") Sub Item second link
+                        li: a(href="#") Sub Item third link
+                .h-menu-dd__layout-col
+                    ul
+                        li: a(href="#") Sub Item Col 2 - 1
+                        li: a(href="#") Sub Item Col 2 - 2
+                        li: a(href="#") Sub Item Col 2 - 3 link
+                .h-menu-dd__layout-col.h-menu-dd__layout-col_promo
+                    a.h-menu-dd__layout-promo(href="#")
+                        img(src="pic/catalog/item-1.png" alt="")
+                        .h-menu-dd__layout-promo-text
+                            Some content
+                    a.h-menu-dd__layout-promo(href="#")
+                        img(src="pic/catalog/item-1.png" alt="")
+                        .h-menu-dd__layout-promo-text
+                            Some content
+
+
+
+
+
+        li.h-menu-dd__item.h-menu-dd__active: a(href="#").h-menu-dd__link Active item

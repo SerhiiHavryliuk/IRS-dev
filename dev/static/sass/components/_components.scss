@@ -1,0 +1,64 @@
+// =============================================================================
+// .item with icon
+// =============================================================================
+
+.icon {
+  padding-left: 31px;
+  position: relative;
+  display: inline-block;
+}
+
+.icon__p {
+  display: inline-block;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+
+
+// =============================================================================
+// .quantity
+// =============================================================================
+.quantity {
+  width: 284px;
+  height: 48px;
+  display: inline-block;
+
+  .button {
+    width: 48px;
+    height: 48px;
+    font-size: 32px;
+    text-align: center;
+    line-height: 44px;
+    display: inline-block;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    @include breakpoint(desktop) {
+      font-size: 27px;
+      line-height: 46px;
+    }
+  }
+}
+
+.quantity__numeric {
+  display: inline-block;
+  height: 48px;
+  width: 156px;
+  margin: 0 10px;
+  font-size: 28px;
+  line-height: 48px;
+  vertical-align: top;
+  text-align: center;
+
+  &:after {
+    content: " шт";
+  }
+
+  @include breakpoint(tablet) {
+    line-height: 48px;
+  }
+
+}

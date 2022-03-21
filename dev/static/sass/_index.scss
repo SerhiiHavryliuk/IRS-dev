@@ -1,0 +1,2326 @@
+//---------------------------------------------
+// header
+//---------------------------------------------
+body {
+  @include breakpoint(s) {
+    font-size: 18px;
+  }
+}
+.irs__header {
+  position: relative;
+  margin-top: 184px;
+
+  @include breakpoint(m) {
+    margin-top: 143px;
+  }
+  @include breakpoint(s) {
+    margin-top: 147px;
+  }
+}
+
+.irs__main-title {
+  font-size: 73px;
+  line-height: 85px;
+  text-transform: uppercase;
+  color: $color-text-white;
+  margin-bottom: 27px;
+
+  @include breakpoint(m) {
+    font-size: 60px;
+    line-height: 70px;
+    margin-bottom: 29px;
+  }
+
+  @include breakpoint(s) {
+    font-size: 40px;
+    line-height: 40px;
+    max-width: 300px;
+    margin-bottom: 22px;
+
+  }
+}
+
+.irs__subtitle {
+  color: $color-text-white;
+  font-size: 24px;
+  line-height: 37px;
+
+  @include breakpoint(s) {
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 300px;
+  }
+}
+
+//---------------------------------------------
+// SYSTEM
+//---------------------------------------------
+.irs__system {
+  padding-top: 60px;
+  padding-bottom: 65px;
+  position: relative;
+
+  @include breakpoint(m) {
+    padding-left: 0;
+    padding-bottom: 17px;
+    padding-top: 30px;
+  }
+
+}
+
+.irs__system-title-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 52px;
+
+  @include breakpoint(s) {
+    margin-top: 23px;
+  }
+}
+
+.irs__system-title-col {
+
+  &:nth-child(1) {
+    flex: 51.5%;
+
+    .title {
+      @include breakpoint(s) {
+        max-width: 245px;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    flex: 20%;
+
+    @include breakpoint(m) {
+      display: none;
+    }
+  }
+
+}
+
+.layout-system {
+
+  @include breakpoint(m) {
+    padding: 0;
+  }
+}
+
+.irs__system-sum {
+  display: block;
+  color: $color-primary;
+  font-size: $font-size-50;
+  font-family: $font-family-black;
+  font-weight: 900;
+  line-height: 50px;
+  margin-top: 5px;
+}
+
+.irs__system-members {
+  color: $color-text-light;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-top: 5px;
+  margin-left: 106px;
+}
+
+.irs__system-descr {
+
+  width: 474px;
+  line-height: 30px;
+  margin-top: 16px;
+
+  @include breakpoint(m) {
+    width: 100%;
+  }
+
+  @include breakpoint(s) {
+    line-height: 26px;
+  }
+
+}
+
+.irs__system-descr-wrap {
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 10px;
+    height: 80px;
+    background-color: $color-primary;
+
+    @include breakpoint(s) {
+      width: 5px;
+    }
+  }
+}
+
+// icons system --------------
+.irs__system-icons-row {
+  display: flex;
+  justify-content: space-between;
+
+  @include breakpoint(m) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.irs__system-icons-col {
+
+  @include breakpoint(m) {
+    width: 100%;
+  }
+
+  &:nth-child(1) {
+    min-width: 220px;
+    padding-top: 82px;
+
+    display: flex;
+    flex-direction: column;
+    flex: 30%;
+
+    @include breakpoint(m) {
+      display: flex;
+      order: 2;
+      flex-direction: row;
+      max-width: inherit;
+      padding-left: 30px;
+      padding-top: 28px;
+    }
+
+    @include breakpoint(s) {
+      flex-wrap: wrap;
+      padding-left: 25px;
+    }
+  }
+
+  &:nth-child(2) {
+    flex: 60%;
+
+    @include breakpoint(m) {
+      flex: 100%;
+      order: 1;
+      margin-top: -15px;
+    }
+
+    @include breakpoint(s) {
+      margin: 17px auto 0 auto;
+    }
+
+    img {
+      margin-top: -15px;
+
+      @include breakpoint(m) {
+        width: 100%;
+      }
+    }
+  }
+
+  img {
+    display: block;
+  }
+
+
+}
+
+// icons face
+.irs__system-map {
+  position: relative;
+}
+
+.irs__system-face-show {
+  opacity: 1!important;
+}
+
+.irs__system-face {
+  //opacity: 0;
+  display: none;
+  position: absolute;
+
+  &:nth-child(1) {
+    top: 40%;
+    left: 20%;
+
+    @include breakpoint(m) {
+      top: 45%;
+      left: 3%;
+    }
+
+    @include breakpoint(s) {
+      top: 38%;
+      left: 4%;
+    }
+
+    img {
+      @include breakpoint(s) {
+        width: 60%;
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    top: 75%;
+    left: 27%;
+
+    @include breakpoint(m) {
+      top: 74%;
+      left: 19%;
+    }
+
+    @include breakpoint(s) {
+      top: 74%;
+      left: 12%;
+    }
+
+    img {
+      @include breakpoint(s) {
+        width: 60%;
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    top: 57%;
+    left: 46%;
+
+    @include breakpoint(m) {
+      top: 59%;
+      left: 40%;
+    }
+
+    @include breakpoint(s) {
+      top: 57%;
+    }
+
+    img {
+      @include breakpoint(s) {
+        width: 60%;
+      }
+    }
+  }
+
+  &:nth-child(4) {
+    top: 25%;
+    left: 61%;
+
+    @include breakpoint(m) {
+      top: 31%;
+      left: 56%;
+    }
+
+    @include breakpoint(s) {
+      top: 26%;
+      left: 61%;
+    }
+
+    img {
+      @include breakpoint(s) {
+        width: 60%;
+      }
+    }
+  }
+
+  &:nth-child(5) {
+    top: 54%;
+    left: 71%;
+
+    @include breakpoint(m) {
+      top: 56%;
+      left: 67%;
+    }
+
+    @include breakpoint(s) {
+      top: 54%;
+      left: 74%;
+    }
+
+    img {
+      @include breakpoint(s) {
+        width: 60%;
+      }
+    }
+  }
+
+  &:nth-child(6) {
+    top: 34%;
+    left: 83%;
+
+    @include breakpoint(m) {
+      top: 39%;
+      left: 80%;
+    }
+
+    @include breakpoint(s) {
+      top: 32%;
+      left: 80%;
+    }
+
+    img {
+      @include breakpoint(s) {
+        width: 60%;
+      }
+    }
+  }
+}
+
+
+
+.irs__system-item {
+  display: flex;
+  margin-bottom: 45px;
+
+  @include breakpoint(m) {
+    flex-flow: column;
+    flex: 100%;
+    padding-right: 10px;
+    max-width: 239px;
+  }
+
+  @include breakpoint(s) {
+    flex-direction: row;
+    flex: 100%;
+    padding-left: 0;
+    max-width: 760px;
+    margin-bottom: 30px;
+  }
+
+  &:nth-child(1) {
+    padding-left: 0;
+  }
+  &:nth-child(3) {
+    .irs__system-text {
+
+      @include breakpoint(m) {
+        max-width: 210px;
+      }
+
+      @include breakpoint(s) {
+        max-width: 500px;
+      }
+    }
+
+  }
+}
+
+.irs__system-icon {
+  min-width: 70px;
+}
+
+.irs__system-text {
+  padding-left: 19px;
+  font-size: $font-size-18;
+  font-weight: 400;
+  line-height: 25px;
+  max-width: 300px;
+
+  @include breakpoint(m) {
+    padding-left: 0;
+    margin-top: 11px;
+    max-width: 185px;
+  }
+
+  @include breakpoint(s) {
+    padding-left: 19px;
+    margin-top: 0;
+    max-width: 500px;
+  }
+}
+
+//---------------------------------------------
+//  Почему мы открыли мрс?
+//---------------------------------------------
+.irs__mpc {
+  position: relative;
+  z-index: 0;
+  background-color: #f6f6fa;
+  padding: 112px 0 105px 0;
+
+  @include breakpoint(m) {
+    padding-top: 73px;
+    padding-bottom: 34px;
+  }
+
+  @include breakpoint(s) {
+    padding-top: 44px;
+    margin-bottom: 38px;
+  }
+}
+
+.irs__mpc-group {
+
+  &:before {
+    position: absolute;
+    top: 279px;
+    left: 0;
+    content: "";
+    width: 10px;
+    height: 80px;
+    background-color: $color-primary;
+
+    @include breakpoint(m) {
+      top: 221px;
+    }
+    @include breakpoint(s) {
+      top: 141px;
+      width: 5px;
+    }
+  }
+}
+
+// модификаторы для скрытия показа блока
+.irs__mpc_hide-tablet {
+  display: block;
+
+  @include breakpoint(m) {
+    display: none;
+  }
+}
+
+.irs__mpc_show-tablet {
+  display: none;
+
+  @include breakpoint(m) {
+    display: flex;
+  }
+}
+
+.irs__mpc-title {
+  margin-bottom: 46px;
+
+  @include breakpoint(m) {
+    margin-bottom: 27px;
+  }
+
+  @include breakpoint(s) {
+    margin-bottom: 38px;
+  }
+}
+
+.irs__mpc-row {
+  display: flex;
+  justify-content: space-between;
+
+  @include breakpoint(m) {
+    flex: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+.irs__mpc-col {
+
+  &:nth-child(1) {
+    flex: 50%;
+    padding-right: 20px;
+  }
+
+  &:nth-child(2) {
+    min-width: 500px;
+    padding-top: 21px;
+
+    @include breakpoint(m) {
+      align-self: flex-end;
+      margin-top: -200px;
+      text-align: right;
+      padding-right: 29px;
+    }
+
+    @include breakpoint(s) {
+      align-self: center;
+      margin-top: 20px;
+      text-align: left;
+      padding-right: 0;
+    }
+  }
+}
+
+.irs__mpc-text {
+  padding-bottom: 30px;
+  line-height: 30px;
+  max-width: 740px;
+
+  @include breakpoint(s) {
+    line-height: 25px;
+    padding-bottom: 25px;
+  }
+
+  &:nth-last-child(1) {
+    @include breakpoint(m) {
+      max-width: 290px;
+    }
+    @include breakpoint(s) {
+      max-width: none;
+      line-height: 25px;
+    }
+  }
+}
+
+.irs__mpc-text-row {
+  display: flex;
+
+  @include breakpoint(s) {
+    flex-wrap: wrap;
+  }
+
+  .irs__mpc-text {
+
+    @include breakpoint(m) {
+      padding-right: 20px;
+    }
+
+    @include breakpoint(s) {
+      flex: 100%;
+      padding-right: 0;
+    }
+  }
+
+  .irs__mpc-video-wrap {
+    flex: 100%;
+    justify-content: flex-end;
+
+    @include breakpoint(m) {
+      margin-top: 22px;
+    }
+    @include breakpoint(s) {
+      margin-top: 23px;
+    }
+  }
+}
+
+.irs__mpc-video-link {
+  position: relative;
+
+  img {
+    min-width: 380px;
+    position: relative;
+    z-index: 2;
+
+    @include breakpoint(m) {
+      min-width: 341px;
+    }
+
+    @include breakpoint(s) {
+      min-width: inherit;
+    }
+    @media (max-width: 365px) {
+      margin-right: -20px;
+    }
+
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: -239px;
+    left: 188px;
+    width: 310px;
+    height: 341px;
+    background-color: $color-primary;
+    z-index: 1;
+
+    @include breakpoint(m) {
+      top: -202px;
+      left: 111px;
+      width: 249px;
+      height: 300px;
+    }
+
+    @include breakpoint(s) {
+      width: 205px;
+      left: 138px;
+      top: -178px;
+      height: 270px;
+    }
+
+    @media (max-width: 365px) {
+      width: 180px;
+      left: auto;
+      right: -40px;
+    }
+  }
+}
+
+.irs__mpc-video-title {
+  position: relative;
+  z-index: 2;
+  line-height: 20px;
+  color: $color-titles;
+  font-size: $font-size-18;
+  font-family: $font-family-black;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 11px;
+  margin-bottom: 3px;
+}
+
+.irs-mpc-video-date {
+  color: $color-primary;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+//---------------------------------------------
+// How work
+//---------------------------------------------
+.irs__work {
+  position: relative;
+  padding-top: 114px;
+
+  @include breakpoint(m) {
+    padding-top: 71px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @include breakpoint(s) {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 4px;
+  }
+}
+
+.irs__work-group {
+  @include breakpoint(m) {
+    &:before {
+      position: absolute;
+      top: 239px;
+      left: 0;
+      content: "";
+      width: 10px;
+      height: 80px;
+      background-color: $color-primary;
+
+      @include breakpoint(s) {
+        width: 5px;
+        top: 103px;
+      }
+    }
+  }
+}
+
+
+.irs__work-row {
+  display: flex;
+}
+
+.irs__work-col {
+  &:nth-child(1) {
+    min-width: 440px;
+
+    @include breakpoint(m) {
+      width: 100%;
+    }
+
+  }
+
+  &:nth-child(2) {
+    padding-left: 75px;
+    width: 63%;
+    text-align: left;
+
+    @include breakpoint(m) {
+      padding-left: 0;
+      width: 100%;
+    }
+  }
+}
+
+.irs__work-money {
+  margin-bottom: 41px;
+
+  @include breakpoint(m) {
+    margin-bottom: 10px;
+  }
+
+  @include breakpoint(s) {
+    margin-bottom: 19px;
+  }
+}
+
+.irs__work-coin, .irs__work-precent {
+  font-family: $font-family-black;
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 30px;
+
+  @include breakpoint(s) {
+    font-size: 30px;
+  }
+}
+.irs__work-coin {
+  color: $color-text-light;
+  margin-bottom: 9px;
+
+  @include breakpoint(s) {
+    margin-bottom: 0;
+  }
+}
+
+.irs__work-precent {
+  color: $color-text-white;
+  line-height: 50px;
+  position: relative;
+  width: 181px;
+
+  @include breakpoint(s) {
+    line-height: 40px;
+    margin-top: 5px;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background-image: url("../img/arrow.png");
+    height: 30px;
+    width: 21px;
+
+    @include breakpoint(s) {
+      top: 8px;
+      right: 40px;
+      height: 23px;
+    }
+  }
+}
+.irs__work-title {
+  color: $color-primary;
+  margin-bottom: 45px;
+
+  @include breakpoint(s) {
+    padding-left: 25px;
+    padding-right: 25px;
+    line-height: 38px;
+    margin-bottom: 22px;
+  }
+}
+
+.irs__work-text {
+  font-size: $font-size-20;
+  line-height: 30px;
+  font-weight: 400;
+  max-width: 850px;
+  margin-top: 31px;
+
+  @include breakpoint(s) {
+    padding-left: 25px;
+    padding-right: 25px;
+    line-height: 25px;
+    margin-top: 24px;
+    font-size: 18px;
+  }
+}
+.irs__work-text-bold {
+  color: $color-primary;
+  font-weight: 500;
+}
+
+.irs__work-money-group {
+  min-width: 440px;
+  height: 340px;
+  background-color: $color-primary;
+  padding-left: 90px;
+  padding-top: 71px;
+  margin-top: 149px;
+  text-align: left;
+
+  @include breakpoint(m) {
+    justify-content: space-between;
+    margin: 33px -20px 0 -20px;
+    padding: 30px 30px 0 30px;
+    height: 140px;
+  }
+
+  @include breakpoint(s) {
+    flex-flow: column;
+    height: 210px;
+    min-width: 270px;
+    width: 100%;
+    margin: 30px 0 0 0;
+    padding: 23px 25px 0 25px;
+  }
+
+}
+.irs__work-hide-tablet {
+  @include breakpoint(m) {
+    display: none;
+  }
+
+}
+
+.irs__work-show-tablet {
+  display: none;
+  @include breakpoint(m) {
+    display: flex;
+  }
+}
+
+//---------------------------------------------
+// стратегический план  развития МРС
+//---------------------------------------------
+.irs__plan {
+  padding-bottom: 146px;
+
+  @include breakpoint(m) {
+    padding-bottom: 60px;
+  }
+
+  @include breakpoint(s) {
+    padding-bottom: 0;
+  }
+}
+
+.irs__plan-title {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 111px;
+  margin-bottom: 110px;
+
+  @include breakpoint(m) {
+    margin-top: 63px;
+    margin-bottom: 99px;
+  }
+
+  @include breakpoint(s) {
+    padding-left: 25px;
+    padding-right: 25px;
+    line-height: 40px;
+    margin-top: 74px;
+    margin-bottom: 44px;
+  }
+}
+
+.irs__plan-row {
+  display: flex;
+  justify-content: space-around;
+
+  @include breakpoint(m) {
+    flex-wrap: wrap;
+  }
+
+  @include breakpoint(s) {
+    flex-flow: column;
+  }
+}
+
+.irs__plan-col {
+  display: flex;
+  padding: 0 20px;
+
+  &:nth-child(1), &:nth-child(2) {
+
+    .irs__plan-item {
+
+      @include breakpoint(m) {
+        margin-bottom: 94px;
+      }
+
+      @include breakpoint(s) {
+        margin-bottom: 66px;
+      }
+    }
+
+  }
+}
+
+.irs__plan-item {
+  max-width: 315px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include breakpoint(m) {
+    width: 270px;
+  }
+
+  @include breakpoint(s) {
+    width: 300px;
+    margin-bottom: 61px;
+  }
+
+}
+
+.irs__plan-img {
+  height: 272px;
+
+  @include breakpoint(m) {
+    height: 246px;
+  }
+
+  @include breakpoint(s) {
+    height: 233px;
+  }
+}
+
+.irs__plan-subtitle {
+  font-family: $font-family-black;
+  color: $color-primary;
+  font-size: 25px;
+  font-weight: 900;
+  line-height: 30px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.irs__plan-text {
+  font-size: $font-size-18;
+  font-weight: 400;
+  line-height: 29px;
+}
+
+//---------------------------------------------
+// Абсолютная  эффективность
+//---------------------------------------------
+.irs__efficiency {
+  position: relative;
+  background-image: url("../img/efficiency-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 900px;
+  padding-top: 111px;
+
+  @include breakpoint(m) {
+    padding-top: 72px;
+    background-image: url("../img/efficiency-bg-ipad.jpg");
+    height: 780px;
+  }
+
+  @include breakpoint(s) {
+    padding-top: 39px;
+    height: 742px;
+  }
+}
+
+.irs__efficiency-group {
+  &:before {
+    position: absolute;
+    top: 270px;
+    right: 0;
+    content: "";
+    width: 10px;
+    height: 120px;
+    background-color: $color-primary;
+
+    @include breakpoint(m) {
+      left: 0;
+      top: 220px;
+      height: 80px;
+    }
+
+    @include breakpoint(s) {
+      width: 5px;
+      top: 125px;
+    }
+  }
+}
+
+.irs__efficiency-wrap{
+  display: flex;
+  justify-content: flex-end;
+
+  @include breakpoint(m) {
+    justify-content: center;
+  }
+
+}
+
+.irs__efficiency-content {
+  width: 720px;
+  margin-right: 21px;
+
+  @include breakpoint(s) {
+    width: 100%;
+  }
+
+  .title {
+    margin-bottom: 50px;
+
+    @include breakpoint(m) {
+      margin-bottom: 27px;
+    }
+  }
+}
+
+.irs__efficiency-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.irs__efficiency-col {
+  display: flex;
+  flex: 50%;
+  margin-bottom: 51px;
+
+  img {
+    display: block;
+    width: 70px;
+    height: 70px;
+  }
+
+  @include breakpoint(s) {
+    flex: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.irs__efficiency-item {
+  position: relative;
+  display: inline-block;
+  padding-left: 90px;
+  height: 70px;
+  width: 300px;
+}
+
+.irs__efficiency-text {
+  line-height: 24px;
+  padding-top: 13px;
+  display: block;
+
+  @media (max-width: 360px) {
+    font-size: 18px;
+    max-width: 195px;
+  }
+}
+
+.irs__efficiency-icon {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  background: url(../img/icon-efficiency-1.png);
+
+}
+
+.irs__efficiency-icon_2 {
+  background: url(../img/icon-efficiency-2.png);
+  background-repeat: no-repeat;
+}
+.irs__efficiency-icon_3 {
+  background: url(../img/icon-efficiency-3.png);
+}
+
+.irs__efficiency-icon_4 {
+  background: url(../img/icon-efficiency-4.png);
+}
+
+.irs__efficiency-subtitle {
+  margin-bottom: 118px;
+  line-height: 29px;
+  max-width: 600px;
+
+  @include breakpoint(m) {
+    margin-bottom: 100px;
+  }
+  @include breakpoint(s) {
+    line-height: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+.irs__efficiency-question {
+  margin-bottom: 33px;
+  font-family: $font-family-medium;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 50px;
+
+  @include breakpoint(s) {
+    margin-bottom: 15px;
+  }
+}
+
+//---------------------------------------------
+// Почему именно МРС?
+//---------------------------------------------
+.irs__why-mpc {
+  position: relative;
+  background-image: url("../img/why-mpc-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 960px;
+  padding-top: 112px;
+  color: $color-text-white;
+
+  @include breakpoint(m) {
+    padding-top: 71px;
+    height: 920px;
+  }
+
+  @include breakpoint(s) {
+    padding-top: 43px;
+    height: 1010px;
+  }
+
+  @media (max-width: 400px) {
+    height: 1045px;
+  }
+
+  @media (max-width: 360px) {
+    height: 1200px;
+  }
+
+  .title {
+    color: $color-text-white;
+  }
+}
+
+.irs__why-mpc-group {
+  &:before {
+    position: absolute;
+    top: 210px;
+    left: 0;
+    content: "";
+    width: 10px;
+    height: 80px;
+    background-color: $color-primary;
+
+    @include breakpoint(m) {
+      left: 0;
+      top: 180px;
+    }
+    @include breakpoint(s) {
+      width: 5px;
+      top: 119px;
+    }
+  }
+}
+
+.irs__why-mpc-wrap{
+  display: flex;
+
+  @include breakpoint(m) {
+    justify-content: center;
+  }
+
+}
+
+.irs__why-mpc-content {
+  width: 962px;
+
+  @include breakpoint(m) {
+    width: 720px;
+    margin-right: -10px;
+  }
+  @include breakpoint(s) {
+    width: 100%;
+  }
+
+}
+
+.irs__why-mpc-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.irs__why-mpc-col {
+  display: flex;
+  flex: 50%;
+  margin-bottom: 50px;
+
+  @include breakpoint(s) {
+    margin-bottom: 26px;
+    flex: 100%;
+  }
+
+  img {
+    display: block;
+    height: 70px;
+    width: 70px;
+  }
+
+  &:nth-child(3), &:nth-child(4) {
+    .irs__why-mpc-item {
+      @media (max-width: 360px) {
+        height: 120px;
+      }
+    }
+  }
+
+}
+
+.irs__why-mpc-item {
+  position: relative;
+  display: inline-block;
+  padding-left: 85px;
+  height: 70px;
+
+  @include breakpoint(m) {
+    padding-left: 90px;
+  }
+}
+
+.irs__why-mpc-text {
+  line-height: 24px;
+  color: #ccc;
+  display: block;
+  padding-top: 12px;
+  max-width: 330px;
+
+  @media (max-width: 360px) {
+    font-size: 18px;
+    max-width: 195px;
+  }
+}
+
+.irs__why-mpc-icon {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  background: url(../img/icon-why-mpc-1.png);
+}
+
+.irs__why-mpc-icon_2 {
+  background: url(../img/icon-why-mpc-2.png);
+}
+
+.irs__why-mpc-icon_3 {
+  background: url(../img/icon-why-mpc-3.png);
+}
+
+.irs__why-mpc-icon_4 {
+  background: url(../img/icon-why-mpc-4.png);
+}
+
+.irs__why-mpc-subtitle {
+  margin-top: 47px;
+  margin-bottom: 100px;
+  line-height: 29px;
+
+  @include breakpoint(m) {
+    margin-bottom: 70px;
+  }
+
+  @include breakpoint(s) {
+    line-height: 25px;
+    margin-top: 28px;
+    margin-bottom: 34px;
+  }
+}
+
+.irs__why-mpc-question {
+  margin-bottom: 43px;
+  font-family: $font-family-medium;
+  font-size: 25px;
+  font-weight: 500;
+
+  @include breakpoint(s) {
+    margin-bottom: 24px;
+  }
+}
+
+.irs__why-mpc-publishers-group {
+  margin-top: 66px;
+
+  @include breakpoint(s) {
+    margin-top: 29px;
+    padding-left: 5px;
+  }
+}
+
+.irs__why-mpc-publishers-title {
+
+  font-family: $font-family-medium;
+  font-size: 25px;
+  font-weight: 500;
+
+  @include breakpoint(s) {
+    max-width: 270px;
+  }
+}
+  .irs__why-mpc-publishers {
+     margin-top: 48px;
+    display: flex;
+
+    @include breakpoint(s) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 345px;
+    }
+
+    @media (max-width: 360px) {
+      max-width: 270px;
+    }
+
+  img {
+
+    @include breakpoint(s) {
+      width: 80%;
+    }
+
+    @media (max-width: 360px) {
+      width: 70%;
+    }
+
+  }
+}
+
+.irs__why-mpc-publisher {
+  display: flex;
+  align-items: center;
+  margin-right: 49px;
+
+  @include breakpoint(s) {
+    margin-right: 1px;
+    margin-bottom: 16px;
+  }
+
+}
+
+//------------------------------------------------------
+// Наши мероприятия
+//------------------------------------------------------
+
+.irs__events {
+  padding-top: 112px;
+
+  @include breakpoint(m) {
+    padding-top: 73px;
+  }
+
+  @include breakpoint(s) {
+    padding-top: 52px;
+  }
+}
+
+.layout-events {
+  max-width: $size-site-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @include breakpoint(m) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include breakpoint(s) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.irs__events-main-title {
+  margin-bottom: 46px;
+  text-align: center;
+  padding: 0 20px;
+
+  @include breakpoint(m) {
+    margin-bottom: 27px;
+  }
+}
+
+.irs__events-descr {
+  line-height: 30px;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-bottom: 52px;
+  padding: 0 20px;
+
+  @include breakpoint(m) {
+    max-width: 650px;
+  }
+
+  @include breakpoint(s) {
+    line-height: 25px;
+    margin-bottom: 45px;
+  }
+}
+
+// item -----------------------------
+.irs__events-item {
+  position: relative;
+  display: block;
+
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+// icon play + text
+.irs__events-text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: left;
+}
+
+.irs__events-title {
+  position: relative;
+  padding-bottom: 16px;
+  padding-left: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  color: $color-text-white;
+  font-size: $font-size-16;
+}
+
+// модификатор для всех картинок с видео
+.irs__events_video {
+
+  .irs__events-title {
+    padding-left: 78px;
+
+    @include breakpoint(m) {
+      padding-left: 20px;
+    }
+    @include breakpoint(s) {
+      padding-left: 65px;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: calc(50% - 30px);
+      left: 20px;
+
+      width: 40px;
+      height: 40px;
+      background: url(../img/events/play.png);
+
+      @include breakpoint(m) {
+        top: -44px;
+      }
+
+      @include breakpoint(s) {
+        top: calc(50% - 30px);
+        left: 16px;
+      }
+    }
+  }
+}
+
+//  модификатор для первого видео
+.irs__events_large {
+
+  .irs__events-title {
+    padding-left: 110px;
+    font-size: $font-size-18;
+    padding-bottom: 13px;
+    line-height: 25px;
+
+    @include breakpoint(s) {
+      padding-left: 65px;
+      font-size: 16px;
+      line-height: 25px;
+      padding-bottom: 12px;
+    }
+
+    &:before {
+      top: 0;
+      left: 20px;
+
+      width: 70px;
+      height: 70px;
+      background: url(../img/events/play-large.png);
+
+      @include breakpoint(s) {
+        top: 8px;
+        left: 16px;
+        width: 40px;
+        height: 40px;
+        background: url(../img/events/play.png);
+      }
+    }
+  }
+}
+
+.irs__events-date {
+  display: block;
+  color: $color-primary;
+  font-size: 14px;
+}
+
+.irs__events-icon {
+  display: block;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 70px;
+  height: 70px;
+  background: url(../img/events/play-large.png);
+}
+
+.irs__events_hide-tablet {
+  @include breakpoint(m) {
+    display: none;
+  }
+}
+
+.irs__events_hide-mob {
+  @include breakpoint(s) {
+    display: none;
+  }
+}
+
+.irs__events-group {
+
+  .irs__events-item {
+    width: 25%;
+    float: left;
+
+    @include breakpoint(m) {
+      width: 33%;
+    }
+
+    @include breakpoint(s) {
+      width: 100%;
+      float: none;
+    }
+
+    // первое видео делае больше по размеру
+    &:nth-child(1) {
+      width: 50%;
+
+      @media (max-width: 1500px) {
+        width: 49.99%;
+      }
+
+      @include breakpoint(m) {
+        width: 66%;
+      }
+
+      @include breakpoint(s) {
+        width: 100%;
+      }
+    }
+
+    &:nth-child(6), &:nth-child(7),  &:nth-child(8), &:nth-child(9),  &:nth-child(10), &:nth-child(11),  &:nth-child(12), &:nth-child(13) {
+
+      @media (max-width: 1500px) {
+        margin-top: -1px;
+      }
+
+    }
+
+    &:nth-child(4), &:nth-child(5),  &:nth-child(7), &:nth-child(8),  &:nth-child(11), &:nth-child(12) {
+      @include breakpoint(m) {
+        margin-top: -1px;
+      }
+    }
+
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+}
+
+/*
+ * Анимация
+ * https://github.com/daneden/animate.css
+ * animate.css -http://daneden.me/animate
+ * Version - 3.5.1
+ * Licensed under the MIT license - http://opensource.org/licenses/MIT
+ *
+ * Copyright (c) 2016 Daniel Eden
+ */
+
+.animated {
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+}
+
+.animated.flipOutX,
+.animated.flipOutY,
+.animated.bounceIn,
+.animated.bounceOut {
+  -webkit-animation-duration: 2.75s;
+  animation-duration: 1.75s;
+}
+
+// стили анимации
+
+
+@-webkit-keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(.97, .97, .97);
+    transform: scale3d(.97, .97, .97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+
+  20% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    -webkit-transform: scale3d(.9, .9, .9);
+    transform: scale3d(.9, .9, .9);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(1.03, 1.03, 1.03);
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    -webkit-transform: scale3d(.97, .97, .97);
+    transform: scale3d(.97, .97, .97);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+
+
+//--------------------------------------------------------
+// Registration
+//--------------------------------------------------------
+
+// общие
+.input {
+  height: $size-controls-height;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: $font-size-16;
+  padding: 0 18px;
+  color: #999;
+}
+
+input[type="button"], input[type="submit"], input[type="reset"] {
+  -webkit-appearance: none;
+  font-size: $font-size-18;
+}
+
+// color plaholder
+::-webkit-input-placeholder {color: #999;}
+::-moz-placeholder          {color: #999;}/* Firefox 19+ */
+:-moz-placeholder           {color: #999;}/* Firefox 18- */
+:-ms-input-placeholder      {color: #999;}
+
+label {
+  color: $color-text-light;
+  font-size: $font-size-18;
+  padding-bottom: 16px;
+}
+
+//-----------------------
+.irs__reg-wrap {
+  position: relative;
+}
+
+.irs__reg-close {
+  position: absolute;
+  top: 60px;
+  right: 33px;
+
+  @include breakpoint(s) {
+    top: 15px;
+    right: 10px;
+  }
+}
+
+.irs__reg {
+
+  max-width: 910px;
+  padding: 67px 25px 50px 25px;
+  margin: 0 auto;
+
+  @include breakpoint(s) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .title {
+    max-width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 51px;
+    color: $color-text-light;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 40px;
+
+    @include breakpoint(s) {
+      font-size: 25px;
+      line-height: 30px;
+      margin-bottom: 30px;
+    }
+  }
+
+}
+
+.irs__reg-languages {
+  margin-bottom: 24px;
+  padding-left: 26px;
+
+  @include breakpoint(s) {
+    margin: 0 auto 20px auto;
+    max-width: 360px;
+    padding: 0 15px 0 35px;
+  }
+
+  img {
+    margin-right: 19px;
+  }
+
+}
+
+.irs__reg-languages_active {
+
+  img {
+    width: 33px;
+    height: 33px;
+    border: 2px solid #1cbb69;
+    border-radius: 16.5px;
+  }
+
+}
+
+// FORM----------------------------
+
+.irs__reg-form-wrap{
+  background-color: #f6f6fa;
+  border-radius: 20px;
+  padding: 43px 60px 51px 60px;
+
+  @include breakpoint(s) {
+    padding: 25px 20px 40px 20px;
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.irs__reg-form-row {
+  position: relative;
+  margin-bottom: 65px;
+
+  @include breakpoint(s) {
+    margin-bottom: 30px;
+  }
+
+  &:nth-child(1), &:nth-child(2) {
+    &:before {
+      content: "";
+      position: absolute;
+      max-width: 740px;
+      width: 100%;
+      height: 1px;
+      opacity: 0.5;
+      bottom: -25px;
+      left: 0;
+      background-color: #ccc;
+
+      @include breakpoint(s) {
+        bottom: -11px;
+      }
+    }
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  .layout-form-vert-1 .layout-form-row {
+    margin-bottom: 23px;
+  }
+}
+
+
+.irs__reg-form-col {
+  width: 50%;
+  float: left;
+  text-align: left;
+
+  @include breakpoint(s) {
+    width: 100%;
+  }
+
+  &:nth-child(1) {
+    padding-right: 30px;
+
+    @include breakpoint(s) {
+      padding-right: 0;
+    }
+  }
+
+  &:nth-child(2) {
+    padding-left: 30px;
+
+    @include breakpoint(s) {
+      padding-left: 0;
+    }
+  }
+}
+
+
+.irs-reg__license {
+  margin: -45px auto 34px auto;
+  max-width: 475px;
+
+  .link {
+    position: relative;
+    text-decoration: none;
+
+    @include breakpoint(s) {
+      text-decoration: underline;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: $color-primary;
+
+      @include breakpoint(s) {
+        display: none;
+      }
+    }
+  }
+}
+
+.irs__reg-button {
+  input {
+    max-width: 340px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 25px;
+    font-size: $font-size-18;
+
+    @include breakpoint(s) {
+      padding-bottom: 3px;
+      line-height: 36px;
+    }
+  }
+
+}
+
+//------------------------------------------------
+// login
+//------------------------------------------------
+.irs__login-wrap {
+  position: relative;
+  padding-top: 100px;
+
+  @include breakpoint(s) {
+    padding-top: 31px;
+  }
+}
+
+.irs__login-close {
+  position: absolute;
+  top: 60px;
+  right: 33px;
+
+  @include breakpoint(s) {
+    top: 15px;
+    right: 9px;
+  }
+}
+
+.irs__login {
+
+  max-width: 510px;
+  padding: 29px 25px 46px 25px;
+  margin: 0 auto;
+
+  @include breakpoint(s) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .layout-form-row {
+    text-align: left;
+    margin-bottom: 33px;
+
+    @include breakpoint(s) {
+      margin-bottom: 23px;
+    }
+  }
+}
+
+.irs__login-title {
+  max-width: 580px;
+  margin: 29px auto 22px auto ;
+  color: $color-text-light;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 40px;
+  padding: 0 25px;
+
+  @include breakpoint(s) {
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 0;
+    padding: 0 10px;
+  }
+}
+
+// FORM----------------------------
+
+.irs__login-form-wrap{
+  background-color: #f6f6fa;
+  border-radius: 20px;
+  padding: 43px 60px 51px 60px;
+
+  @include breakpoint(s) {
+    padding: 25px 20px;
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.irs__login-button {
+  margin-top: 17px;
+
+  input {
+    width: 100%;
+    border-radius: 25px;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.irs__login-forget-pass {
+  display: block;
+  margin-top: 43px;
+  text-decoration: underline;
+  font-size: $font-size-18;
+}
+
+
+/*======================================
+  Selectric v1.11.0
+======================================*/
+
+.selectric-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.selectric-responsive {
+  width: 100%;
+}
+
+.selectric {
+  border: 1px solid #ccc;
+  background: #fff;
+  position: relative;
+  width: 100%;
+}
+
+.selectric .label {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 38px 0 18px;
+  font-size: 16px;
+  line-height: 48px;
+  color: #999;
+  height: 48px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+
+  width: 280px;
+
+  @media (max-width: 1020px) {
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    width: 209px;
+  }
+  @media (max-width: 765px) {
+    width: 100%;
+  }
+
+  @media (max-width: 320px) {
+    width: 200px;
+  }
+}
+
+.selectric .button {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 3px;
+  width: 38px;
+  height: 38px;
+  color: #999;
+  background-color: white;
+}
+
+.selectric .button:after {
+  background-image:  url("../img/registration/select.png");
+  background-repeat: no-repeat;
+  content: "";
+  width: 16px;
+  height: 11px;
+
+  position: absolute;
+  top: 18px;
+  right: 14px;
+  z-index: 10;
+}
+
+.selectric-focus .selectric {
+  border-color: #aaaaaa;
+}
+
+.selectric-open {
+  z-index: 9999;
+}
+
+.selectric-open .selectric-items {
+  display: block;
+}
+
+.selectric-disabled {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.selectric-hide-select {
+  position: relative;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+
+.selectric-hide-select select {
+  position: absolute;
+  left: -100%;
+}
+
+.selectric-hide-select.selectric-is-native {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.selectric-hide-select.selectric-is-native select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  border: none;
+  z-index: 1;
+  box-sizing: border-box;
+  opacity: 0;
+}
+
+.selectric-input {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  outline: none !important;
+  border: none !important;
+  *font: 0/0 a !important;
+  background: none !important;
+}
+
+.selectric-temp-show {
+  position: absolute !important;
+  visibility: hidden !important;
+  display: block !important;
+}
+
+/* Items box */
+.selectric-items {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  z-index: -1;
+  box-shadow: 0 0 10px -6px;
+}
+
+.selectric-items .selectric-scroll {
+  height: 100%;
+  overflow: auto;
+}
+
+.selectric-above .selectric-items {
+  top: auto;
+  bottom: 100%;
+}
+
+.selectric-items ul, .selectric-items li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  line-height: 28px;
+  min-height: 20px;
+}
+
+.selectric-items li {
+  display: block;
+  padding: 10px;
+  color: black;
+  cursor: pointer;
+  font-size: $font-size-16;
+}
+
+.selectric-items li.selected {
+  background:  $color-primary;
+  color: #fff;
+}
+
+.selectric-items li.highlighted {
+  background:  $color-primary;
+  color: #fff;
+}
+
+.selectric-items li:hover {
+  background: $color-primary;
+  color: #fff;
+}
+
+.selectric-items .disabled {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+  cursor: default !important;
+  background: none !important;
+  color: #666 !important;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.selectric-items .selectric-group .selectric-group-label {
+  font-weight: bold;
+  padding-left: 10px;
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: none;
+  color: #444;
+}
+
+.selectric-items .selectric-group.disabled li {
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+.selectric-items .selectric-group li {
+  padding-left: 25px;
+}

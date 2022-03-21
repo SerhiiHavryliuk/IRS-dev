@@ -1,0 +1,23 @@
+// =============================================================================
+// form row inline
+// =============================================================================
+
+@import "../../base/layout/_grid";
+
+.layout-form-inline {
+
+  .layout-form-row {
+
+    margin-left: 50px;
+    display: inline-block;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    label {
+      margin-right: 10px;
+    }
+
+  }
+}

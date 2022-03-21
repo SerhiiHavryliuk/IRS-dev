@@ -1,0 +1,50 @@
+doctype
+html(lang="ru")
+
+    block vars
+
+    head
+        meta(charset="utf-8")
+        title=pageTitle
+
+        base(href="/")
+
+        link(rel="stylesheet" href="css/main.css")
+        link(rel="stylesheet" href="css/demo/demo.css")
+        link(rel="stylesheet" href="css/demo/shCore.css")
+        link(rel="stylesheet" href="css/demo/shThemeDefault.css")
+
+        -if(pageName == "demo-forms-basic" || pageName == "demo-forms-layouts" || pageName == "footer")
+            link(rel="stylesheet" href="css/demo/forms-basic.css")
+        -if(pageName == "layout" || pageName == "demo-forms-layouts")
+            link(rel="stylesheet" href="css/demo/grid.css")
+        -if(pageName == "demo-cards-ecommerce" || pageName == "demo-cards-text")
+            link(rel="stylesheet" href="css/demo/cards.css")
+        -if(pageName == "breadcrumb-list" || pageName == "menu")
+            link(rel="stylesheet" href="css/demo/navigations.css")
+
+        script(src="js/demo/shCore.js")
+        script(src="js/demo/shBrushXml.js")
+        script(src="js/demo/shBrushCss.js")
+        script(src="js/demo/shBrushJScript.js")
+
+        link(rel="shortcut icon" href="img/favicon.ico")
+
+        meta(name="description", content="")
+        meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0")
+        meta(name="apple-mobile-web-app-capable" content="yes")
+        meta(name="apple-touch-fullscreen" content="yes")
+        meta(name="apple-mobile-web-app-capable" content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style" content="white")
+        meta(name="apple-mobile-web-app-title" content="")
+
+    body
+        .layuot-global.layout-demo
+
+            include _demo-menu
+
+            block page
+
+        script SyntaxHighlighter.all();
+        include _js
+

@@ -1,0 +1,45 @@
+// -------------------------------------
+// simple e-commerce card
+// variables:
+// type         - тип карточки. предопределнные типы top, left, right - по расположению картинки-превью
+// titleText    - name of product
+// picDesktop   - photo preview for desktop (for example)
+// picMobile    - photo preview for mobile (for example)
+// href         - link to product page
+// desc         - short description
+// date         - article date
+// datetime     - attr datetime for html5 tag time
+// -------------------------------------
+
+mixin t-card-1(data)
+
+    if data.type == "top"
+
+        .t-card.t-card_top
+            a(href=data.href)
+                span.t-card__pic.t-card__pic_m(style="background-image: url("+ data.picDesktop +"")
+                span.t-card__pic.t-card__pic_xs-s(style="background-image: url("+ data.picMobile +"")
+                span.t-card__title= data.titleText
+            time.t-card__date(datetime="data.datetime")= data.date
+            .t-card__desc= data.desc
+
+
+    else if data.type == "left" || data.type == "right"
+
+        div(class="t-card t-card_#{data.type}")
+            a.t-card__pic-col(href=data.href)
+                span.t-card__pic.t-card__pic_m(style="background-image: url("+ data.picDesktop +"")
+                span.t-card__pic.t-card__pic_xs-s(style="background-image: url("+ data.picMobile +"")
+            .t-card__text-col
+                a.t-card__title(href=data.href)= data.titleText
+                time.t-card__date(datetime="data.datetime")= data.date
+                .t-card__desc= data.desc
+
+    else if data.type == "without"
+
+        div(class="t-card t-card_#{data.type}")
+            a.t-card__title(href=data.href)= data.titleText
+            time.t-card__date(datetime="data.datetime")= data.date
+            .t-card__desc= data.desc
+
+

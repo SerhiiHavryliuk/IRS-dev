@@ -1,0 +1,30 @@
+// =============================================================================
+// form row under each other
+// labels pasitions - on the left
+// =============================================================================
+
+@import "../../base/layout/_grid";
+
+$size-label-width: 150px;
+
+.layout-form-vert-2 {
+
+  .layout-form-row {
+
+    margin-bottom: 10px;
+
+    @include make-row();
+    align-items: center;
+
+    label {
+      width: $size-label-width;
+    }
+
+    .input,
+    .select-custom {
+
+      width: calc(100% - #{$size-label-width});
+
+    }
+  }
+}

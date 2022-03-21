@@ -1,0 +1,238 @@
+// =============================================================================
+// .main-menu
+// =============================================================================
+
+.main-menu {
+  display: flex;
+  justify-content: space-between;
+  
+  //background: url("../img/header/header-img.jpg") no-repeat;
+  //background-size: cover;
+  //height: 900px;
+  padding-top: 67px;
+
+  @include breakpoint(s) {
+    padding-top: 44px;
+  }
+
+  @include breakpoint(l) {
+    justify-content: flex-end;
+  }
+}
+
+.main-menu__list {
+  display: inline-block;
+  margin-left: 278px;
+  height: 20px;
+
+  @media (max-width: 1170px) {
+    margin-left: 145px;
+  }
+
+  @media (max-width: 1023px){
+    display: none;
+  }
+}
+
+.main-menu__item {
+  display: inline-block;
+  padding-right: 23px;
+
+  @media (max-width: 1170px) {
+    padding-right: 20px;
+  }
+}
+//.main-menu__active {
+//  font-weight: bold;
+//}
+.main-menu__link {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+
+  &:hover {
+    color: $color-primary;
+  }
+}
+
+
+//------------------------- right (lang and button)----------------------------
+.main-menu__list-right {
+  display: inline-block;
+  margin-right: 40px;
+  margin-top: -5px;
+  height: 20px;
+
+
+  @include breakpoint(l) {
+    margin-right: 17px;
+  }
+
+  @include breakpoint(m) {
+    margin-right: 30px;
+  }
+  @include breakpoint(s) {
+    margin-right: 10px;
+  }
+}
+
+.main-menu__item-lang, .main-menu__item-signin {
+  display: inline-block;
+}
+
+.main-menu__item-lang {
+  position: relative;
+  font-size: 15px;
+}
+.main-menu__item-signin {
+  position: relative;
+  margin-left: 41px;
+  margin-top: -3px;
+
+  @include breakpoint(m) {
+    margin-left: 63px;
+    margin-top: 0;
+  }
+  @include breakpoint(s) {
+    margin-left: 20px;
+  }
+
+}
+
+.main-menu__link-lang {
+
+}
+
+.main-menu__link-signin {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  line-height: 44px;
+
+  width: 161px;
+  height: 40px;
+  background-color: #1cbb69;
+  border-radius: 20px;
+  padding-left: 32px;
+
+  @include breakpoint(s) {
+    width: 90px;
+    height: 40px;
+    padding-left: 10px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 53px;
+    background: url("../img/header/sign-in.png") no-repeat;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+
+    @include breakpoint(s) {
+      display: none;
+    }
+  }
+
+}
+
+//----------------- lang---------------------
+.sub-menu
+{
+  display: none;
+  position: absolute;
+  top: 30px;
+  width: 80px;
+  height: 112px;
+  background-color: #f6f6fa;
+  border-radius: 3px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+
+  li {
+    padding-bottom: 10px;
+
+    a {
+      color: #333;
+    }
+
+    &:nth-last-child(1) {
+      padding-bottom: 0;
+    }
+  }
+}
+.main-item:focus ~ .sub-menu,
+.main-item:active ~ .sub-menu,
+.sub-menu:hover
+{
+  display: block;
+}
+
+
+.irs__lang {
+  color: white;
+}
+//----------------- icon + text------------------
+
+.icon {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+.icon__t {
+  line-height: 24px;
+}
+.icon__p {
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+// icon position
+.icon_left {
+  padding-left: 31px;
+  .icon__p {
+    left: 0;
+  }
+}
+.icon_right {
+  padding-right: 31px;
+  .icon__p {
+    right: 0;
+  }
+}
+.icon_only-pic {          // для иконк без текста или у котрых текст то етсь то нет, необходимо указаывать размеры (width/height)
+  height: 24px;
+  width: 24px;
+}
+
+// icon images
+.icon__p_ru {
+  width: 24px;
+  height: 24px;
+  background: url("../img/header/ru.png");
+}
+
+.icon__p_eng {
+  width: 24px;
+  height: 24px;
+  background: url("../img/header/eng.png");
+}
+
+.icon__p_chn {
+  width: 24px;
+  height: 24px;
+  background: url("../img/header/chn.png");
+}
+
+.icon__p_spn {
+  width: 24px;
+  height: 24px;
+  background: url("../img/header/spn.png");
+}
+
+.fa-phone {
+  top: 5px;
+}

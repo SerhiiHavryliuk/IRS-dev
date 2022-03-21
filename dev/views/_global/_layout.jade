@@ -1,0 +1,19 @@
+doctype
+html(lang="ru")
+
+    block vars
+
+    include _head
+
+    body
+        .layuot-global
+
+            -if(pageName == "index")
+                include _header
+
+            block page
+
+        -if(pageName == "index")
+            include _footer
+        include _js
+

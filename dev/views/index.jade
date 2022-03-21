@@ -1,0 +1,341 @@
+extends _global/_layout
+
+block vars
+    -pageTitle ="Главная"
+    -pageName ="index"
+
+block page
+    a(id="about")
+    section.irs__system
+        .layout-main
+            .irs__system-title-row
+                .irs__system-title-col
+                    h2.title Международная <br> Резервная Система –
+                .irs__system-title-col
+                    .irs__system-sum 12729
+                    .irs__system-members участников системы <br> по всему миру
+        .irs__system-descr-wrap
+            .layout-main
+                .irs__system-descr Компания нового поколения, использующая лучшие алгоритмы многоуровневого маркетинга для покупки биткоинов
+        .layout-main.layout-system
+            .irs__system-icons-row
+                .irs__system-icons-col
+                    .irs__system-item
+                        .irs__system-icon
+                            img(src="img/icon-system-1.png" alt="")
+                        .irs__system-text Объединяет представителей разных профессий, возрастов и национальностей
+                    .irs__system-item
+                        .irs__system-icon
+                            img(src="img/icon-system-2.png" alt="")
+                        .irs__system-text Предоставляет дополнительный источник дохода – помогая улучшить качество жизни
+                    .irs__system-item
+                        .irs__system-icon
+                            img(src="img/icon-system-3.png" alt="")
+                        .irs__system-text Популяризирует биткоин как альтернативу банковской системе – анонимную и безопасную
+                .irs__system-icons-col
+                    .irs__system-map
+                        picture
+                            source(srcset="img/map-mob.jpg", media="(max-width: 414px)")
+                            source(srcset="img/map-tablet.png", media="(max-width: 1100px)")
+                            source(srcset="img/map-desktop.png")
+                            img(src="img/map-desktop.png", alt="")
+                        .irs__system-face-group
+                            .irs__system-face#irs__system-face-1
+                                img(src="img/face/face-1.png", alt="")
+                            .irs__system-face#irs__system-face-2
+                                img(src="img/face/face-2.png", alt="")
+                            .irs__system-face#irs__system-face-3
+                                img(src="img/face/face-3.png", alt="")
+                            .irs__system-face#irs__system-face-4
+                                img(src="img/face/face-4.png", alt="")
+                            .irs__system-face#irs__system-face-5
+                                img(src="img/face/face-5.png", alt="")
+                            .irs__system-face#irs__system-face-6
+                                img(src="img/face/face-6.png", alt="")
+
+    section.irs__mpc
+        .irs__mpc-group
+            .layout-main
+                h2.title.irs__mpc-title Почему мы <br> открыли мрс?
+                .irs__mpc-row
+                    .irs__mpc-col
+                        .irs__mpc-text Всё больше людей покупает и использует биткоины – к 2016 году зарегистрировано уже 2,5 миллионов биткоин-кошельков, а к 2019 году по прогнозам их число достигнет 4,7 миллионов
+                        .irs__mpc-text На протяжении 7 лет Биткоин показывает стабильно позитивный рост, а его цена напрямую зависит от спроса. Чем выше спрос – тем выше цена, и соответственно, тем больше ваша прибыль.
+                        .irs__mpc-text-row
+                            .irs__mpc-text Мы можем повлиять на курс биткоинов и извлечь из этого выгоду. Но для этого нам нужна ваша помощь и желание получать стабильный пассивный доход
+                            .irs__mpc-video-wrap.irs__mpc_show-tablet
+                                .irs__mpc-video-group
+                                    a.irs__mpc-video-link(href="https://www.youtube.com/watch?v=eIFm1GFJ4yc", target="_blank")
+                                        picture
+                                            source(srcset="img/mpc-video-mob.jpg", media="(max-width: 414px)")
+                                            source(srcset="img/mpc-video-tablet.jpg", media="(max-width: 1100px)")
+                                            source(srcset="img/mpc-video.jpg")
+                                            img(src="img/mpc-video.jpg", alt="")
+                                    .irs__mpc-video-title Видео обращение <br> президента компании
+                                    .irs-mpc-video-date 31 октября, 2016
+                    .irs__mpc-col.irs__mpc_hide-tablet
+                        a.irs__mpc-video-link(href="https://www.youtube.com/watch?v=eIFm1GFJ4yc", target="_blank")
+                            picture
+                                source(srcset="img/mpc-video-mob.jpg", media="(max-width: 414px)")
+                                source(srcset="img/mpc-video-tablet.jpg", media="(max-width: 1100px)")
+                                source(srcset="img/mpc-video.jpg")
+                                img(src="img/mpc-video.jpg", alt="")
+                        .irs__mpc-video-title Видео обращение <br> президента компании
+                        .irs-mpc-video-date 31 октября, 2016
+
+    a(id="how_work")
+    section.irs__work
+        .irs__work-group
+            .irs__work-row
+                .irs__work-col.irs__work-hide-tablet
+                    .irs__work-money-group
+                        .irs__work-money
+                            .irs__work-coin 1 RM = $1.3822
+                            .irs__work-precent +0.35%
+                        .irs__work-money
+                            .irs__work-coin 1 BTC = $741.7
+                            .irs__work-precent +0.09%
+                .irs__work-col
+                    h2.title.irs__work-title как это <br> работает?
+                    .irs__work-text При покупке пакета для удобства расчета используется внутренняя валюта –
+                        a.link.irs__work-text-bold(href="#") &nbsp; Reserve Money (RM)&nbsp;
+                        |. Она имеет свой собственный курс, который зависит от количества участников в системе International Reserve System, от количества купленных биткоинов, а также от предполагаемого курса биткоина через год.
+                    .irs__work-money-group.irs__work-show-tablet
+                        .irs__work-money
+                            .irs__work-coin 1 RM = $1.3822
+                            .irs__work-precent +0.35%
+                        .irs__work-money
+                            .irs__work-coin 1 BTC = $741.7
+                            .irs__work-precent +0.09%
+                    .irs__work-text Такой принцип формирования курса обеспечивает дополнительную защиту от резких колебаний и гарантирует, что
+                        span.irs__work-text-bold &nbsp; курс Reserve Money &nbsp;
+                        | не упадет ниже первоначального значения. При этом даже при значительном падении, курс снова начнет расти, благодаря вновь возникающему дефициту.
+
+
+    section.irs__plan
+        h2.title.irs__plan-title стратегический план  развития МРС
+        .irs__plan-row
+            .irs__plan-col
+                .irs__plan-item
+                    .irs__plan-img
+                        img(src="img/icon-plan-1.png", alt="")
+                    .irs__plan-subtitle Привлечение  инвесторов
+                    .irs__plan-text Используя лучшие механики MLM- компаний, мы создаем сообщество инвесторов нового поколения
+            .irs__plan-col
+                .irs__plan-item
+                    .irs__plan-img
+                        img(src="img/icon-plan-2.png", alt="")
+                    .irs__plan-subtitle инвестиции в фонд МРС
+                    .irs__plan-text Инвестируя биткоины в нашу систему, инвесторы создают дефицит финансов на рынке, что влечет к росту его курса
+            .irs__plan-col
+                .irs__plan-item
+                    .irs__plan-img
+                        img(src="img/icon-plan-3.png", alt="")
+                    .irs__plan-subtitle получение прибыли
+                    .irs__plan-text Зарабатывая на пассивном или активном инвестировании каждый участник системы сможет повысить уровень своей жизни
+
+
+    section.irs__efficiency
+        .irs__efficiency-group
+            .irs__efficiency-wrap.layout-main
+                .irs__efficiency-content
+                    h2.title Абсолютная <br> эффективность
+                    .irs__efficiency-subtitle В основе МРС заложена математически рассчитанная и экономически обоснованная модель по повышению и ускорению роста курса биткоинов
+                    .irs__efficiency-question Почему биткоин?
+                    .irs__efficiency-row
+                        .irs__efficiency-col
+                            span.irs__efficiency-item
+                                span.irs__efficiency-text Стабильно позитивная динамика роста курса
+                                span.irs__efficiency-icon
+                        .irs__efficiency-col
+                            span.irs__efficiency-item
+                                span.irs__efficiency-text Многоуровневая система защиты
+                                span.irs__efficiency-icon.irs__efficiency-icon_2
+                        .irs__efficiency-col
+                            span.irs__efficiency-item
+                                span.irs__efficiency-text Единственная альтернатива банковской системе
+                                span.irs__efficiency-icon.irs__efficiency-icon_3
+                        .irs__efficiency-col
+                            span.irs__efficiency-item
+                                span.irs__efficiency-text Высокая ликвидность
+                                span.irs__efficiency-icon.irs__efficiency-icon_4
+
+    section.irs__why-mpc
+        .irs__why-mpc-group
+            .irs__why-mpc-wrap.layout-main-irs
+                .irs__why-mpc-content
+                    h2.title Почему именно МРС?
+                    .irs__why-mpc-subtitle Международный Резервная Система – первый и единственный сервис, специализирующийся исключительно на биткоинах. Мы знаем о них всё, поскольку изучали их с самого начала
+                    .irs__why-mpc-question Преимущества IRS
+                    .irs__why-mpc-row
+                        .irs__why-mpc-col
+                            span.irs__why-mpc-item
+                                span.irs__why-mpc-text Многоуровневая партнерская программа
+                                span.irs__why-mpc-icon
+
+                        .irs__why-mpc-col
+                            span.irs__why-mpc-item
+                                span.irs__why-mpc-text Автоматизированная и прозрачная система транзакций
+                                span.irs__why-mpc-icon.irs__why-mpc-icon_2
+
+                        .irs__why-mpc-col
+                            span.irs__why-mpc-item
+                                span.irs__why-mpc-text Уникальная бонусная программа, зависящая от ваших инвестиций
+                                span.irs__why-mpc-icon.irs__why-mpc-icon_3
+
+                        .irs__why-mpc-col
+                            span.irs__why-mpc-item
+                                span.irs__why-mpc-text Подарки при выполнении квалификаций: от золотых часов до особняков
+                                span.irs__why-mpc-icon.irs__why-mpc-icon_4
+
+            .layout-main
+                .irs__why-mpc-publishers-group
+                    .irs__why-mpc-publishers-title О нас пишут популярные издания
+                    .irs__why-mpc-publishers
+                        .irs__why-mpc-publisher
+                            img(src="img/publication-1.png", alt="")
+                        .irs__why-mpc-publisher
+                            img(src="img/publication-2.png", alt="")
+                        .irs__why-mpc-publisher
+                            img(src="img/publication-3.png", alt="")
+                        .irs__why-mpc-publisher
+                            img(src="img/publication-4.png", alt="")
+                        .irs__why-mpc-publisher
+                            img(src="img/publication-5.png", alt="")
+                        .irs__why-mpc-publisher
+                            img(src="img/publication-6.png", alt="")
+
+    a(id="events")
+    section.irs__events
+        h2.title.irs__events-main-title наши мероприятия
+        .irs__events-descr Мы постоянно проводим различные мероприятия по всему миру, направленные на повышение уровня знаний наших партнеров. Мы заинтересованы, чтобы каждый из наших партнеров становился успешнее, поэтому постоянно совершенствуем наши обучающие программы и семинары
+        .irs__events-group.layout-events
+
+            a.irs__events-item.irs__events_large.irs__events_video(href="https://www.youtube.com/watch?v=M_8QpX6DNO0", target="_blank")
+                picture
+                    source(srcset="img/events/event-1-mob.jpg", media="(max-width: 760px)")
+                    source(srcset="img/events/event-1-tablet.jpg", media="(max-width: 1000px)")
+                    source(srcset="img/events/event-1.jpg")
+                    img(src="img/events/event-1.jpg", alt="")
+                .irs__events-text
+                    .irs__events-title INTERNATIONAL RESERVE SYSTEM <br> GRAND OPENING
+                        span.irs__events-date 21 августа, Тель-Авив
+
+            a.irs__events-item.irs__events_video(href="https://www.youtube.com/watch?v=5EhPCfpwbss", target="_blank")
+                picture
+                    source(srcset="img/events/event-2.jpg", media="(max-width: 760px)")
+                    source(srcset="img/events/event-2-tablet.jpg", media="(max-width: 1000px)")
+                    source(srcset="img/events/event-2.jpg")
+                    img(src="img/events/event-2.jpg", alt="")
+                .irs__events-text
+                    .irs__events-title Первая научно-финансовая  <br> конференция
+                        span.irs__events-date 4 августа, Киев
+            a.irs__events-item(href="https://www.facebook.com/pg/International.Reserve.System.IRS/photos/?tab=album&album_id=498846996981543", target="_blank")
+                picture
+                    source(srcset="img/events/event-3.jpg", media="(max-width: 760px)")
+                    source(srcset="img/events/event-3-tablet.jpg", media="(max-width: 1000px)")
+                    source(srcset="img/events/event-3.jpg")
+                    img(src="img/events/event-3.jpg", alt="")
+                .irs__events-text
+                    .irs__events-title Первая научно-финансовая <br> конференция (фото)
+                        span.irs__events-date 4 августа, Киев
+
+            a.irs__events-item(href="https://www.facebook.com/pg/International.Reserve.System.IRS/photos/?tab=album&album_id=513714868828089", target="_blank")
+                picture
+                    source(srcset="img/events/event-4.jpg", media="(max-width: 760px)")
+                    source(srcset="img/events/event-4-tablet.jpg", media="(max-width: 1000px)")
+                    source(srcset="img/events/event-4.jpg")
+                    img(src="img/events/event-4.jpg", alt="")
+                .irs__events-text
+                    .irs__events-title Научно финансовая конференция <br> «IRS» (фото)
+                        span.irs__events-date 21 сентября, Одесса
+
+            a.irs__events-item.irs__events_video(href="https://www.youtube.com/watch?v=eMt6LwnNEzI", target="_blank")
+                picture
+                    source(srcset="img/events/event-5.jpg", media="(max-width: 760px)")
+                    source(srcset="img/events/event-5-tablet.jpg", media="(max-width: 1000px)")
+                    source(srcset="img/events/event-5.jpg")
+                    img(src="img/events/event-5.jpg", alt="")
+                .irs__events-text
+                    .irs__events-title Научно финансовая конференция <br> «IRS»
+                        span.irs__events-date 21 сентября, Одесса
+
+            a.irs__events-item.irs__events_video.irs__events_hide-mob(href="https://www.youtube.com/watch?v=1pAZvwW0Yd8", target="_blank")
+                picture
+                    source(srcset="img/events/event-6.jpg", media="(max-width: 760px)")
+                    source(srcset="img/events/event-6-tablet.jpg", media="(max-width: 1000px)")
+                    source(srcset="img/events/event-6.jpg")
+                    img(src="img/events/event-6.jpg", alt="")
+                .irs__events-text
+                    .irs__events-title Презентация в Бразили
+                        span.irs__events-date 17 октября
+
+            a.irs__events-item(href="https://www.facebook.com/International.Reserve/posts/1801455610123398", target="_blank")
+                picture
+                    source(srcset="img/events/event-7.jpg", media="(max-width: 760px)")
+                    source(srcset="img/events/event-7-tablet.jpg", media="(max-width: 1000px)")
+                    source(srcset="img/events/event-7.jpg")
+                    img(src="img/events/event-7.jpg", alt="")
+                .irs__events-text
+                    .irs__events-title Презентация в Бразили (фото)
+                        span.irs__events-date 17 октября
+
+            a.irs__events-item(href="https://www.facebook.com/International.Reserve/posts/1797870913815201", target="_blank")
+                picture
+                    source(srcset="img/events/event-8.jpg", media="(max-width: 760px)")
+                    source(srcset="img/events/event-8-tablet.jpg", media="(max-width: 1000px)")
+                    source(srcset="img/events/event-8.jpg")
+                    img(src="img/events/event-8.jpg", alt="")
+                .irs__events-text
+                    .irs__events-title Презентация в Бразили (фото)
+                        span.irs__events-date 10 октября
+
+            a.irs__events-item.irs__events_hide-mob(href="https://www.facebook.com/International.Reserve/posts/1796735320595427", target="_blank")
+                picture
+                    source(srcset="img/events/event-9.jpg", media="(max-width: 760px)")
+                    source(srcset="img/events/event-9-tablet.jpg", media="(max-width: 1000px)")
+                    source(srcset="img/events/event-9.jpg")
+                    img(src="img/events/event-9.jpg", alt="")
+                .irs__events-text
+                    .irs__events-title Презентация в Бразили (фото)
+                        span.irs__events-date 10 октября
+
+            a.irs__events-item.irs__events_hide-mob(href="https://www.facebook.com/International.Reserve/posts/1796076997327926", target="_blank")
+                picture
+                    source(srcset="img/events/event-10.jpg", media="(max-width: 760px)")
+                    source(srcset="img/events/event-10-tablet.jpg", media="(max-width: 1000px)")
+                    source(srcset="img/events/event-10.jpg")
+                    img(src="img/events/event-10.jpg", alt="")
+                .irs__events-text
+                    .irs__events-title Презентация в Бразили (фото)
+                        span.irs__events-date 6 октября
+
+            a.irs__events-item(href="https://www.facebook.com/pg/International.Reserve.System.IRS/photos/?tab=album&album_id=533177150215194", target="_blank")
+                picture
+                    source(srcset="img/events/event-11.jpg", media="(max-width: 760px)")
+                    source(srcset="img/events/event-11-tablet.jpg", media="(max-width: 1000px)")
+                    source(srcset="img/events/event-11.jpg")
+                    img(src="img/events/event-11.jpg", alt="")
+                .irs__events-text
+                    .irs__events-title Презентация IRS (фото)
+                        span.irs__events-date 25 октября, Киев
+
+            a.irs__events-item.irs__events_video(href="https://www.youtube.com/watch?v=yq39nB4C_so", target="_blank")
+                picture
+                    source(srcset="img/events/event-12.jpg", media="(max-width: 760px)")
+                    source(srcset="img/events/event-12-tablet.jpg", media="(max-width: 1000px)")
+                    source(srcset="img/events/event-12.jpg")
+                    img(src="img/events/event-12.jpg", alt="")
+                .irs__events-text
+                    .irs__events-title Научно финансовая <br> конференция «IRS»
+                        span.irs__events-date 25 октября, Киев
+
+            a.irs__events-item.irs__events_hide-tablet(href="https://www.facebook.com/International.Reserve/posts/1794542827481343", target="_blank")
+                picture
+                    source(srcset="img/events/event-13.jpg", media="(max-width: 760px)")
+                    source(srcset="img/events/event-13-tablet.jpg", media="(max-width: 1000px)")
+                    source(srcset="img/events/event-13.jpg")
+                    img(src="img/events/event-13.jpg", alt="")
+                .irs__events-text
+                    .irs__events-title Презентация в Бразили (фото)
+                        span.irs__events-date 2 октября

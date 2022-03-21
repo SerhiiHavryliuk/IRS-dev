@@ -1,0 +1,65 @@
+// =============================================================================
+// .card item
+// =============================================================================
+$size-desktop-image-height: 188px;
+$size-desktop-margin-bottom-image: 40px;
+
+.e-card-1 {
+  width: 200px;
+  display: block;
+  padding-top: calc(#{$size-desktop-image-height} + #{$size-desktop-margin-bottom-image});
+  position: relative;
+
+  a {
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+  }
+}
+
+.e-card-1__pic {
+  height: $size-desktop-image-height;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+// different images for different screens
+@import "../../base/var"; // global variables for breakpoints
+
+.e-card-1__pic_xs-s {
+  @include show-for(block, $break-xs, $break-s);
+}
+.e-card-1__pic_m {
+  @include show-for(block, $break-s);
+}
+// end of different images for different screens
+
+.e-card-1__label {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.e-card-1__label_sale {
+  background: #ff0000;
+}
+
+.e-card-1__title {
+  margin-bottom: 10px;
+}
+.e-card-1__desc {
+  margin-bottom: 10px;
+}
+.e-card-1__price {
+  font-weight: bold;
+}
+.e-card-1__oldPrice {
+  text-decoration: line-through;
+  margin-left: 10px;
+}

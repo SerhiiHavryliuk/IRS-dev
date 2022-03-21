@@ -1,0 +1,22 @@
+// =============================================================================
+// orm row under each other
+// labels positions -  on the top
+// =============================================================================
+
+@import "../../base/layout/_grid";
+
+.layout-form-vert-1 {
+
+  .layout-form-row {
+    margin-bottom: 10px;
+
+    @include make-row();
+    flex-direction: column;
+
+    .input {
+      width: 100%;
+    }
+  }
+}
+
+

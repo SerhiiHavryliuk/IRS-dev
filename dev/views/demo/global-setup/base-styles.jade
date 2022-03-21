@@ -1,0 +1,25 @@
+extends ../../_global/_demo-layout
+
+block vars
+    - pageTitle = "Base styles"
+    - pageName = "base-styles"
+
+block page
+    .layout-main
+        .demo-row
+            .demo-title#demo-title-1 Базовые стили (стиля для визуального редактора)
+            .demo-desc
+                | - На страницу компонентов по умолчанию включена секция с базовыми стилями.<br>
+                | - К базовым стилям по умолчанию относятся: основные заголовки, стили для ссылки, стили для визуального редактора.<br>
+                | - Секция для визуального редактора - .visual-editor
+            .demo-sub-title Dependencies:
+                .demo-desc
+                    | - sass/components/forms/_text.scss<br>
+                    | - views/components/_func/_lipsum.jade (необходимо только для генерации lorem ipsum)
+
+            .demo-sub-title Imports Jade:
+                pre(class="brush: js; gutter: false")
+                    | include components/_base
+                .demo-sub-title Imports SCSS:
+                pre(class="brush: js; gutter: false")
+                    | @import "base/base";

@@ -1,0 +1,192 @@
+extends ../../_global/_demo-layout
+
+block vars
+    - pageTitle = "Global layout"
+    - pageName = "layout"
+
+block page
+    .layout-main
+        .demo-row
+            .demo-title#demo-title-1 Общие переменные
+            .demo-desc
+                | - расположение sass/base/layout/_layout.scss<br>
+                |<br>
+                | - $size-footer-height - высота подвала. Необходимо если требуется подвал прижать книзу. Переменная используется так же в sass/components/footer.scss.<br>
+                | - $size-site-max-width - максимальная ширина сайта. По умолчанию если ширина экрана больше данного значения, сайт центрируется (изменить это - класс .layout-global).
+
+        .demo-row
+            .demo-title#demo-title-2 Базовые стили
+            .demo-desc
+                | - расположение sass/base/layout/_layout.scss<br>
+                | <br>
+                | - По умолчанию используется блочная модель border-box - https://webref.ru/css/box-sizing<br>
+                | - По умолчанию основной layout центрируется (если меньше) ширины экрана.<br>
+                | - По умолчанию указаны стили для прижатия подвала книзу
+
+        .demo-row
+            .demo-title#demo-title-3 Breakpoints
+            .demo-desc
+                | - расположение sass/base/layout/_layout.scss<br>
+                | <br>
+                | - По умолчанию определено 5 шагов адаптивности. Уменьшать к-во переменных лучше в самом конце проекта, когда точно понятно, что это можно сделать.<br>
+                | - Если адаптивности не нужна, переменные breakpoints нужно удалить. По умолчанию эти переменные используются в sass/base/typography/_typography.scss и sass/base/layout/_grid.scss<br>
+                | - Если к-во шагов нужно увеличить, то добавляем в переменные новые значения и добавляем эти переменные в условие в mixin breakpoint (sass/base/layout/_mixins.scss)
+            .demo-sub-title Dependencies:
+                .demo-desc
+                    | - sass/base/layout/_mixins.scss
+            .demo-sub-title Example of use:
+                pre(class="brush: js; gutter: false")
+                    | .some-class {
+                    |   /* some default styles for some-class */
+                    |   @include breakpoint(xs) {
+                    |       /* some styles for xs breakpoint */
+                    |   }
+                    | }
+
+        .demo-row
+            .demo-title#demo-title-4 Grid
+            .demo-desc
+                | - расположение sass/base/layout/_grid.scss<br>
+                | - Grid используем только если дизайн был нарисован по сетке или удалось ее (сетку) подобрать<br>
+                | <br>
+                | - $grid-columns - число колонок в сетке.<br>
+                | - $grid-gutter-width - растояние между колонками.<br>
+                | - ширина колонок расчитывается автоматом на освновании ширины контейнера, $grid-columns и $grid-gutter-width.<br>
+                | - $grid-gutter-width можно использовать как сочетании с breakpoint когда растояния в сетеке меняются:<br>
+                | $grid-gutter-width: (<br>
+                |              m: 20px,<br>
+                |              l: 30px<br>
+                | );<br>
+                | так и со статическим значением, если сетка не меняется:<br>
+                | $grid-gutter-width: 30px;
+
+            .demo-sub-title Dependencies:
+                .demo-desc
+                    | - sass/base/layout/_grid-mixins.scss<br>
+                    | - sass/base/layout/_grid-var.scss
+                .demo-sub-title Imports SCSS:
+                    pre(class="brush: js; gutter: false")
+                        | @import "base/layout/_grid";
+            .demo-sub-title Использование grid
+                .demo-desc
+                    | - Сетки строятся на базе flexbox модели:<br>
+                    | - row - контейнер для группировки элементов в строку.<br>
+                    | - row - относительного его ширины, величин $grid-gutter-width и $grid-columns будет расчитана ширина одной колонки.<br>
+                    | - column - конейнеры для контента. Контент должен вставляться только в эти элементы.<br>
+                    | - column определяет ширину данного элемента по количеству занимаемых им колонок в дизайне.<br>
+                    | - ширина column (width) всегда имеет значение в процентах.
+            .demo-sub-title Используемые mixins:
+                .demo-desc
+                    | @include make-row(); - добавление стилей строки<br>
+                    | По умолчанию приняты следюущие св-ва: flex-flow: row wrap; - https://webref.ru/css/flex-flow  (изменить это можно в sass/base/layout/_mixins.scss)
+                    | Возможные параметры:<br>
+                    | $max-width: null,           // по умолчанию максимальная ширина определяется родителем-контейнером<br>
+                    | $justify: space-between,    // по умолчанию пустота заполняется между колонками     - https://webref.ru/css/justify-content<br>
+                    | $align: flex-start          // по умолчанию в строке элементы выравниваются по верхнему краю  - https://webref.ru/css/align-content<br>
+                    | @include make-col(N); - ширина колонки. В качестве параметра число колонок сетки. Если это значение не указать, колонка займет всю строку.<br>
+                .demo-sub-title Example of Jade code:
+                pre(class="brush: js; gutter: false")
+                    | .demo-grid-row-layout
+                    |   .demo-grid-col-layout-1 Content of Column 1 (8)
+                    |   .demo-grid-col-layout-2 Content of Column 2 (4)
+
+                .demo-sub-title Example of SCSS code:
+                pre(class="brush: js; gutter: false")
+                    | $grid-columns:      12;
+                    | $grid-gutter-width: 25px;
+                    | .demo-grid-row-layout {
+                    |   @include make-row();
+                    | }
+                    | .demo-grid-col-layout-1 {
+                    |   @include make-col-span(8);
+                    | }
+                    | .demo-grid-col-layout-2 {
+                    |   @include make-col-span(4);
+                    | }
+                .demo-sub-title Result
+                .demo-grid-row-layout
+                    .demo-grid-col-layout-1 Content of Column 1 (8)
+                    .demo-grid-col-layout-2 Content of Column 2 (4)
+
+                .demo-sub-title Изменение числа колонок в строке при использовании grid
+                    .demo-desc
+                        | - В качестве примера, перестроим две колонки в одну
+                    .demo-sub-title Example of Jade code:
+                        pre(class="brush: js; gutter: false")
+                            | .demo-grid-row-layout-2
+                            |   .demo-grid-col-layout-1 Content of Column 1 (8)
+                            |   .demo-grid-col-layout-2 Content of Column 2 (4)
+                    .demo-sub-title Example of SCSS code:
+                        pre(class="brush: js; gutter: false")
+                            | $grid-columns:      12;
+                            | $grid-gutter-width: 25px;
+                            | .demo-grid-row-layout-2 {
+                            |   @include make-row();
+                            |   @include breakpoint(m) {
+                            |     flex-direction: column;
+                            |   }
+                            |   .demo-grid-col-layout-1 {
+                            |     @include make-col(8);
+                            |     background: #006699;
+                            |     padding: 10px;
+                            |     color: #fff;
+                            |     @include breakpoint(m) {
+                            |       @include make-col(12);
+                            |     }
+                            |   }
+                            |   .demo-grid-col-layout-2 {
+                            |     @include make-col(4);
+                            |     background: #008200;
+                            |     padding: 10px;
+                            |     color: #fff;
+                            |     @include breakpoint(m) {
+                            |       @include make-col(12);
+                            |     }
+                            |   }
+                            | }
+                    .demo-sub-title Result
+                        .demo-grid-row-layout-2
+                            .demo-grid-col-layout-1 Content of Column 1 (8)
+                            .demo-grid-col-layout-2 Content of Column 2 (4)
+
+        .demo-row
+            .demo-title#demo-title-5 Готовые функции
+            .demo-desc
+                | - clearfix<br>
+                | - для очистки как float так и flexbox потока
+            .demo-sub-title Dependencies:
+                .demo-desc
+                    | - sass/base/layout/_mixins.scss
+            .demo-sub-title Example of use:
+                pre(class="brush: js; gutter: false")
+                    | .some-class {
+                    |   @include clearfix("flex"); /* для очистки flexbox потока  */
+                    |   @include clearfix(); /* для очистки float потока  */
+                    | }
+            .demo-desc
+                | - show-for<br>
+                | - видимость блока в определенном диапазоне breakpoint:<br>
+                | - The block is visibled in range from $breakpoint-start to $breakpoint-finish screen size<br>
+                | - If $breakpoint-finish null - max-width has not limit<br>
+                | - Type block - what display properties<br>
+            .demo-sub-title Dependencies:
+                .demo-desc
+                    | - sass/base/layout/_mixins.scss
+            .demo-sub-title Example of use:
+                pre(class="brush: js; gutter: false")
+                    | .some-class {
+                    |   @include show-for(flex, s, l); /* показать блок в диапазоне s - l  */
+                    | }
+
+    .demo-panel.demo-panel_inner
+        .demo-panel__section
+            demo-panel__title ON THIS PAGE:
+            ul.demo-panel__list
+                li: a(href="demo/global-setup/layout#demo-title-1") Общие переменные
+                li: a(href="demo/global-setup/layout#demo-title-2") Базовые стили
+                li: a(href="demo/global-setup/layout#demo-title-3") Breakpoints
+                li: a(href="demo/global-setup/layout#demo-title-4") Grid
+                li: a(href="demo/global-setup/layout#demo-title-5") Готовые функции
+        .demo-panel__section
+            ul.demo-panel__list
+                li: a(href="demo/global-setup/layout#") On the top

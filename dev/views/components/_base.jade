@@ -1,0 +1,53 @@
+include _func/_lipsum
+
+h1.title Main title
+hr
+
+h2.title.title_secondary Secondary title
+hr
+
+h2.title.title_secondary Basic text
+p.text
+    +lipsum(5,"sentences")
+
+hr
+
+a.link(href="#") basic link
+hr
+
+span.link element like link
+hr
+
+.visual-editor
+    h2.title.title_secondary Styles for visual editor
+    h1 Header level 1
+    h2 Header level 2
+    h3 Header level 3
+    h4 Header level 4
+    h5 Header level 5
+    h6 Header level 6
+    p
+        +lipsum(5,"sentences")
+    p
+        +lipsum(4,"sentences")
+    table
+        thead
+            tr
+                th Column header 1
+                th Column header 2
+        tbody
+            tr
+                td Item content
+                td
+                    +lipsum(10,"words")
+    ul
+        -for(var x = 0; x < 3; x++)
+         li
+            +lipsum(5,"words")
+    p
+        | <strong>Bold(strong) text</strong> incididunt <em>italic(em) text</em>, elit dolor ex?
+    ol
+        -for(var x = 0; x < 3; x++)
+         li
+            +lipsum(5,"words")
+hr

@@ -1,0 +1,32 @@
+// =============================================================================
+// .input
+// =============================================================================
+.input {
+  @include font-size($font-size-control);
+
+  border: 1px solid $color-controls-border;
+  height: $size-controls-height;
+  padding: 0 11px;
+
+  &:focus {
+    background-color: $color-controls-focus ;
+  }
+}
+
+
+// =============================================================================
+// .textarea
+// =============================================================================
+
+.textarea {
+  @include font-size($font-size-control);
+
+  border: 1px solid $color-controls-border;
+  padding: 11px;
+  width: 100%;
+  height: 120px;
+
+  &:focus {
+    background-color: $color-controls-focus;
+  }
+}

@@ -1,0 +1,101 @@
+// =============================================================================
+// .card item
+// general styles
+// =============================================================================
+$size-desktop-image-height: 188px;
+
+.t-card {
+
+  a {
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+  }
+}
+
+.t-card__pic {
+  width: 100%;
+  height: $size-desktop-image-height;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.t-card__title {
+  margin-bottom: 10px;
+}
+.t-card__desc {
+  margin-bottom: 10px;
+}
+.t-card__date {
+  display: block;
+  margin-bottom: 10px;
+}
+
+
+// =============================================================================
+// adaptive image styles
+// =============================================================================
+@import "../../base/var"; // global variables for breakpoints
+
+.t-card__pic_xs-s {
+  @include show-for(block, $break-xs, $break-s);
+}
+.t-card__pic_m {
+  @include show-for(block, $break-s);
+}
+
+
+// =============================================================================
+// pic on the top
+// =============================================================================
+$size-desktop-margin-bottom-image: 40px;
+
+.t-card_top {
+
+  width: 200px;
+  display: block;
+  padding-top: calc(#{$size-desktop-image-height} + #{$size-desktop-margin-bottom-image});
+  position: relative;
+
+  .t-card__pic {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+  }
+
+}
+
+// =============================================================================
+// pic on the left or right
+// =============================================================================
+@import "../../base/layout/_grid";
+
+.t-card_left,
+.t-card_right {
+
+  @include make-row();
+
+  .t-card__pic-col {
+    width: 30%;
+
+  }
+  .t-card__text-col {
+    width: calc(70% - 200px);
+
+  }
+
+}
+.t-card_right {
+
+  .t-card__pic-col {
+    order: 2;
+  }
+  .t-card__text-col {
+    order: 1;
+  }
+
+}

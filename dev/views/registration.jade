@@ -1,0 +1,94 @@
+extends _global/_layout
+
+block vars
+    -pageTitle ="Регистрация"
+    -pageName ="registration"
+
+block page
+    .irs__reg-wrap
+        .irs__reg-close
+            a(href="#"): img(src="img/registration/close.png" alt="")
+        .irs__reg
+            .irs__reg-languages
+                a(href="#"): img(src="img/registration/lang-1.png" alt="")
+                a(href="#"): img(src="img/registration/lang-2.png" alt="")
+                a(href="#"): img(src="img/registration/lang-3.png" alt="")
+                a.irs__reg-languages_active(href="#"): img(src="img/registration/lang-4.png" alt="")
+                a(href="#"): img(src="img/registration/lang-5.png" alt="")
+                a(href="#"): img(src="img/registration/lang-3.png" alt="")
+                a(href="#"): img(src="img/registration/lang-1.png" alt="")
+
+            h1.title Добро пожаловать в международную резервную систему
+
+            form.irs__reg-form-wrap(action="#" method="post")
+                .irs__reg-form-row
+                    .irs__reg-form-col
+                        fieldset.layout-form-vert-1
+                            .layout-form-row
+                                label(for="name") Имя
+                                input.input(type="text" id="name")
+
+                    .irs__reg-form-col
+                        fieldset.layout-form-vert-1
+                            .layout-form-row
+                                label(for="last_name") Фамилия
+                                input.input(type="text" id="last_name")
+
+                .irs__reg-form-row
+                    .irs__reg-form-col
+                        fieldset.layout-form-vert-1
+                            .layout-form-row
+                                label Страна
+                                select.irs__select
+                                    option Украина
+                                    option Ангия
+                                    option Германия
+                                    option Испания
+                            .layout-form-row
+                                label Основной язык
+                                select.irs__select
+                                    option Русский
+                                    option Английский
+                                    option Португальский
+                                    option Испанский
+                                    option Французкий
+
+                    .irs__reg-form-col
+                        fieldset.layout-form-vert-1
+                            .layout-form-row
+                                label(for="city") Город
+                                input.input(type="text" id="city")
+                            .layout-form-row
+                                label Дополнительный язык
+                                select.irs__select
+                                    option(value='ua') Украинский
+                                    option(value='ru') Русский
+                                    option(value='en') Английский
+                                    option(value='spn') Испанский
+                                    option(value='it') Итальянский
+
+                .irs__reg-form-row
+                    .irs__reg-form-col
+                        fieldset.layout-form-vert-1
+                            .layout-form-row
+                                label(for="email") E-mail
+                                input.input(type="email" id="email")
+                            .layout-form-row
+                                label(for="skype") Skype
+                                input.input(type="text" id="skype" )
+
+                    .irs__reg-form-col
+                        fieldset.layout-form-vert-1
+                            .layout-form-row
+                                label(for="tel") Телефон
+                                input.input(type="tel" id="tel" )
+                            .layout-form-row
+                                label(for="password") Пароль
+                                input.input(type="password" id="password")
+
+
+                .irs-reg__license Нажимая  «Зарегистрироваться», вы соглашаетесь с условиями &nbsp;
+                    a.link(href="#") пользовательского соглашения
+
+                .irs__reg-button
+                    input.button(type="submit" value="Зарегистрироваться")

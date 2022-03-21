@@ -1,0 +1,41 @@
+// =============================================================================
+// waterfall layout
+// it's need lib/jquery.wookmark.js
+//
+// нюансы:
+//    плагин может глючить с кастомными шрифтами (неправильно расчитывается высота item). Как выход - подбираетс сходий шрифт из стандартных
+//    падинги для item-card не добавлять. при необходимости добавляется внутрь контейнер-лейаут или же задаются внутренним элементам
+// =============================================================================
+
+.layout-list_waterfall {
+  position: relative;
+  width: 100%;
+  display: block;
+  background: #28c3ff;
+
+  .item-card {
+
+    width: calc(20% - 40px); // todo переделать на универсальный способ чтобы не просчитывать руками величины
+    display: block;
+    background: #aaa;
+
+    .item-card__desc {
+
+    }
+
+    @include breakpoint(desktop) {
+      width: calc(25% - 38px);
+
+    }
+
+    @include breakpoint(tablet) {
+      width: calc(33% - 33px);
+
+    }
+
+    @include breakpoint(mobile) {
+      width: calc(50% - 26px);
+
+    }
+  }
+}

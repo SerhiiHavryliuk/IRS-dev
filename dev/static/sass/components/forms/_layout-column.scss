@@ -1,0 +1,42 @@
+// =============================================================================
+// form layout for create columns
+// =============================================================================
+
+@import "../../base/layout/_grid";
+
+.layout-form-column {
+
+  @include make-row();
+
+  .layout-form-col-1 {
+    width: 45%;
+  }
+
+  .layout-form-col-2 {
+    width: 100%;
+
+    .button {
+      width: 100%;
+    }
+  }
+
+}
+
+// пример как выровнять в комбинации два поля по ширине колонки
+$size-width-between-inline-inputs: 100px;
+.layout-form-column {
+
+  .layout-form-inline {
+
+    .layout-form-row {
+      width: calc(50% - #{$size-width-between-inline-inputs/2});
+      margin-left: 0;
+
+      &:first-child {
+        margin-right: $size-width-between-inline-inputs;
+      }
+
+    }
+
+  }
+}

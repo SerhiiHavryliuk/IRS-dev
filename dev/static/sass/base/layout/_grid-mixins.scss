@@ -1,0 +1,65 @@
+@import "_mixins";
+
+// =============================================================================
+// Mixins
+// =============================================================================
+
+// создать flex-строку
+@mixin make-row(
+  $max-width: null,           // по умолчанию максимальная ширина определяется родителем-контейнером
+  $justify: space-between,    // по умолчанию пустота заполняется между колонками
+  $align: flex-start          // по умолчанию в строке элементы выравниваются по верхнему краю
+)
+{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: $justify;
+  align-content: $align;
+
+  @if $max-width {
+    max-width: $max-width;
+  }
+}
+
+// вычисляем ширину колонки в процентах
+// $col-nums - число колонок, которое колонка занимает по сетке
+// если $col-nums не передан - колонка занимает всю строку
+@function get-col-width($col-nums)
+{
+  $col-width: auto;
+
+  @if $col-nums {
+    $col-width: percentage(($col-nums / $grid-columns));
+  }
+  @else {
+    $col-width: 100%;
+  }
+
+  @return $col-width;
+}
+
+// создать flex-колонку
+@mixin make-col(
+  $columns: null,               // число занимамых колонок по сетке
+  $gutter: $grid-gutter-width   // растояние между колонками сетки
+)
+{
+
+  @if type-of($gutter) == 'map' { // если gutter задан как breakpoint map
+    @each $breakpoint, $value in $gutter {
+      $padding: $value / 2;
+
+      @include breakpoint($breakpoint) {
+        padding-left: $padding;
+        padding-right: $padding;
+      }
+    }
+  }
+  @else {                   // если gutter задан как число
+    $padding: $gutter / 2;
+    padding-left: $padding;
+    padding-right: $padding;
+  }
+
+  width: get-col-width($columns);
+}

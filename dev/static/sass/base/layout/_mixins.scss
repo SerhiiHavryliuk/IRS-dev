@@ -1,0 +1,83 @@
+@import "var"; // todo хз зачем тут этот импорт, ведь старался глобально объявить переменные, но без этого не рабоатет стабильно, как минимум на этапе сборки
+
+// =============================================================================
+// Clear fix
+// If use flex layout, then use that view @clearfix("flex")
+// http://danisadesigner.com/blog/flexbox-clear-fix-pseudo-elements/
+// =============================================================================
+@mixin clearfix($clear-fix-mode:null) {
+  &::before,
+  &::after {
+    content: ' ';
+    display: table;
+    @if ($clear-fix-mode == "flex") {
+      flex-basis: 0;
+      order: 1;
+    }
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+
+// =============================================================================
+// Breakpoint
+// =============================================================================
+@mixin breakpoint($point) {
+
+  // todo - нет досточной гибкости: чтобы добавить точку, нужно праить код в двух местах -перменные и миксин
+  // решение (advance) отчасти решающее данную пробелму https://www.sitepoint.com/managing-responsive-breakpoints-sass/
+  // сходу не заработало - ошибка SASS парсинга
+  @if $point == xs {
+    @media (max-width: $break-xs) {
+      @content;
+    }
+  }
+  @if $point == s {
+    @media (max-width: $break-s) {
+      @content;
+    }
+  }
+  @if $point == m {
+    @media (max-width: $break-m) {
+      @content;
+    }
+  }
+  @if $point == l {
+    @media (max-width: $break-l) {
+      @content;
+    }
+  } @else if $point == xl {
+    @media (min-width: $break-xl) {
+      @content;
+    }
+  }
+}
+
+
+// =============================================================================
+// The block is visibled in range from $breakpoint-start to $breakpoint-finish screen size
+// If $breakpoint-finish null - max-width has not limit
+// Type block - what display properties
+// =============================================================================
+@mixin show-for(
+  $type-block: block,
+  $breakpoint-start: null,
+  $breakpoint-finish: null
+) {
+
+  display: none;
+
+  @if $breakpoint-finish { // если указан breakpoint-finish - значит есть ограничение по max-width
+    @media (min-width: $breakpoint-start) and (max-width: $breakpoint-finish)  {
+      display: $type-block;
+    }
+  } @else {
+    @media (min-width: $breakpoint-start) {
+      display: $type-block;
+    }
+  }
+
+}

@@ -1,0 +1,100 @@
+extends ../../_global/_demo-layout
+
+block vars
+    - pageTitle = "footer"
+    - pageName = "footer"
+
+block page
+    .layout-main
+
+        .demo-row
+            .demo-title#demo-title-1 Standard card
+            .demo-sub-title  Live example:
+            .demo-live-example
+                include ../../_global/_footer.jade
+            .demo-sub-title Комментарии:
+                .demo-desc
+                    |-
+            .demo-sub-title  Jade code:
+                pre(class="brush: js; gutter: false")
+                    |.footer__row-1
+                    |    .title_secondary.footer__subscription-title Рассылка
+                    |    form.footer__form(action="php/subscribe.json" method="get" novalidate data-validate="true" data-ajax="true")
+                    |        input.input.footer__email(type="email" name="email" placeholder="Ваш e-mail адрес" value="" required="")
+                    |        input.button.footer__submit(type="submit" value="ОК")
+                    |.footer__row-2
+                    |    .footer__column-1
+                    |        .title_secondary Panama.UA
+                    |        p.text Самый детский интернет магазин
+                    |        .footer__copyright &copy; 2012-2016
+                    |        ul.social
+                    |            li: a(href="#").fa.fa-vk
+                    |            li: a(href="#").fa.fa-facebook
+                    |            li: a(href="#").fa.fa-twitter
+                    |            li: a(href="#").fa.fa-odnoklassniki
+                    |    .footer__column-2
+                    |        ul
+                    |            li: a.title_secondary(href="#") О магазине
+                    |            li: a(href="#") Baby клуб
+                    |            li: a(href="#") Доставка и оплата
+                    |            li: a(href="#") Новости
+                    |            li: a.title_secondary(href="#") Товары
+                    |            li: a(href="#") Baby клуб
+                    |            li: a(href="#") Доставка и оплата
+                    |            li: a(href="#") Новости
+                    |    .footer__column-3
+                    |        ul
+                    |            li: a.title_secondary(href="#") Товары 2
+                    |            li: a(href="#") Baby клуб
+                    |            li: a(href="#") Доставка и оплата
+                    |            li: a(href="#") Новости
+                    |            li: a(href="#") пункт 1
+                    |            li: a(href="#") Длинный пункт
+                    |    .footer__column-4
+                    |        .footer__subscription
+                    |            .title_secondary Рассылка
+                    |            form.footer__form(action="#" method="post")
+                    |                fieldset.layout-form-vert-1
+                    |                    .layout-form-row
+                    |                        label(for="input1") Label 1
+                    |                        input.input.footer__email(type="text" id="input1" value="")
+                    |                    .layout-form-row
+                    |                        input.button.footer__submit(type="submit" value="Подписаться")
+
+                    |        .footer__phones
+                    |            span.text +1234567890
+                    |            span.text +1234567890
+                    |        a.link(href="#") Закажите обратный звонок
+                    |.footer__row-3
+                    |    .footer__column-1
+                    |        .title_secondary Panama.UA
+                    |        p.text Самый детский интернет магазин
+                    |        .footer__copyright &copy; 2012-2016
+                    |    .footer__column-2
+                    |        a.footer__frondevo(href="#" rel="nofollow")
+                    |            img(src="img/header/logo.png")
+
+            .demo-sub-title Dependencies:
+                .demo-desc
+                    | - static/sass/components/navigation/_footer.scss
+            .demo-sub-title Dependencies not required:
+                .demo-desc
+                    | - views/components/navigation/_footer.jade
+            .demo-sub-title  Include Jade:
+                pre(class="brush: js; gutter: false")
+                    |include ../../_global/_footer.jade
+            .demo-sub-title  Include SCSS:
+                pre(class="brush: js; gutter: false")
+                    |@import "components/navigation/footer";
+
+    .demo-panel.demo-panel_inner
+        .demo-panel__section
+            demo-panel__title ON THIS PAGE:
+            ul.demo-panel__list
+                li: a(href="demo/navigation/footer#demo-title-1") Footer
+        .demo-panel__section
+            ul.demo-panel__list
+                li: a(href="demo/navigation/footer#") On the top
+
+
+

@@ -1,0 +1,178 @@
+extends ../../_global/_demo-layout
+
+block vars
+    - pageTitle = "Form components"
+    - pageName = "demo-forms-basic"
+
+block page
+    .layout-main
+
+        .demo-row
+            .demo-title#demo-title-1 Text fields
+            .demo-sub-title  Live example:
+            .demo-live-example
+                include ../../components/forms/_text
+
+            .demo-sub-title  Jade code:
+            pre(class="brush: js; gutter: false")
+                | input.input(type="text" placeholder="placeholder" value="")
+                | textarea.textarea()
+
+            .demo-sub-title Dependencies:
+            .demo-desc
+                | - sass/components/forms/_text.scss
+
+            .demo-sub-title Imports Jade:
+            pre(class="brush: js; gutter: false")
+                | include components/forms/_text
+            .demo-sub-title Imports SCSS:
+            pre(class="brush: js; gutter: false")
+                | @import "components/forms/text";
+
+        .demo-row
+            .demo-title#demo-title-2 Buttons
+            .demo-sub-title  Live example:
+            .demo-live-example
+                include ../../components/forms/_button
+
+            .demo-sub-title  Jade code:
+            pre(class="brush: js; gutter: false")
+                | input.button(type="submit" value="Button input")
+                | input.button(type="submit" value="Button disabled" disabled)
+                | a.button(href="#") Button link
+                | a.button.button_disabled(href="#") Link disabled
+
+            .demo-sub-title Dependencies:
+            .demo-desc
+                | - sass/components/forms/_button.scss
+
+            .demo-sub-title Imports Jade:
+            pre(class="brush: js; gutter: false")
+                | components/forms/_button
+            .demo-sub-title Imports SCSS:
+            pre(class="brush: js; gutter: false")
+                | @import "components/forms/button";
+
+
+        .demo-row
+            .demo-title#demo-title-3 Selects
+            .demo-sub-title  Live example:
+            .demo-live-example
+                include ../../components/forms/_select
+
+            .demo-sub-title  Jade code:
+                pre(class="brush: js; gutter: false")
+                    | select.select
+                    |   option Default select
+                    |   option Second text
+                    | &nbsp;
+                    | select.select-custom
+                    |   option Custom select
+                    |   option Second text
+                    | &nbsp;
+                    | select.select-custom(disabled)
+                    |   option Disabled custom select
+                    |   option Second text
+
+            .demo-sub-title Dependencies:
+            .demo-desc
+                | - sass/components/forms/_select.scss <br>
+                | - js/lib/jquery.min.js (for custom only) <br>
+                | - js/lib/_jquery.select.js (for custom only)
+
+            .demo-sub-title Imports Jade:
+                pre(class="brush: js; gutter: false")
+                    | include components/forms/_select
+            .demo-sub-title Imports SCSS:
+                pre(class="brush: js; gutter: false")
+                    | @import "components/forms/select";
+            .demo-sub-title Imports JS:
+                pre(class="brush: js; gutter: false")
+                    | script(src="js/lib/_jquery.select.js")
+
+        .demo-row
+            .demo-title#demo-title-4 Default Checkbox and Radio
+            .demo-sub-title  Live example:
+            .demo-live-example
+                 include ../../components/forms/_check-radio
+
+            .demo-sub-title  Jade code:
+                pre(class="brush: js; gutter: false")
+                    | div
+                    |     input.checkbox(id="checkbox-name" type="checkbox" value="true" checked="")
+                    |     label(for="checkbox-name") Checkbox with a label
+                    | &nbsp;
+                    | div
+                    |     input.checkbox(id="checkbox-name-2" type="checkbox" value="true")
+                    |     label(for="checkbox-name-2")
+                    | &nbsp;
+                    | div
+                    |     input.checkbox(id="checkbox-name-3" type="checkbox" value="true" disabled)
+                    |     label(for="checkbox-name-3") Disabled checkbox
+                    | &nbsp;
+                    | div
+                    |     input.radio(type="radio" id="radio-name-1" name="radio" value="1" checked="")
+                    |     label(for="radio-name-1") Radio 1
+                    | div
+                    |     input.radio(type="radio" id="radio-name-3" name="radio" value="2" disabled)
+                    |     label(for="radio-name-3") Disabled Radio
+
+            .demo-sub-title Dependencies:
+            .demo-desc
+                | None
+
+            .demo-sub-title Imports Jade:
+                pre(class="brush: js; gutter: false")
+                    | include components/forms/_check-radio
+
+
+        .demo-row
+            .demo-title#demo-title-5 Custom Checkbox and Radio
+            .demo-sub-title  Live example:
+            .demo-live-example
+                include ../../components/forms/_custom-check-radio
+
+            .demo-sub-title  Jade code:
+                pre(class="brush: js; gutter: false")
+                    | div.custom-checkbox
+                    |   input(id="checkbox-name" type="checkbox" value="true" checked="")
+                    |   label(for="checkbox-name") Checkbox with a label
+                    | &nbsp;
+                    | div.custom-checkbox
+                    |    input(id="checkbox-name-2" type="checkbox" value="true")
+                    |    label(for="checkbox-name-2")
+                    | &nbsp;
+                    | div.custom-checkbox.custom-checkbox_disabled
+                    |   input(id="checkbox-name-3" type="checkbox" value="true")
+                    |   label(for="checkbox-name-3") Disabled checkbox
+                    | &nbsp;
+                    | div
+                    |    input.custom-radio(type="radio" id="radio-name-1" name="radio" value="1" checked="")
+                    |    label(for="radio-name-1") Radio 1
+                    | div
+                    |    input.custom-radio(type="radio" id="radio-name-3" name="radio" value="2" disabled)
+                    |    label(for="radio-name-3") Disabled Radio
+
+            .demo-sub-title Dependencies:
+            .demo-desc
+                | - sass/components/forms/_custom-check-radio.scss
+
+            .demo-sub-title Imports Jade:
+                pre(class="brush: js; gutter: false")
+                    | include components/forms/_custom-check-radio
+            .demo-sub-title Imports SCSS:
+                pre(class="brush: js; gutter: false")
+                    | @import "components/forms/_custom-check-radio";
+
+    .demo-panel.demo-panel_inner
+        .demo-panel__section
+            demo-panel__title ON THIS PAGE:
+            ul.demo-panel__list
+                li: a(href="demo/forms/basic#demo-title-1") Text fields
+                li: a(href="demo/forms/basic#demo-title-2") Buttons
+                li: a(href="demo/forms/basic#demo-title-3") Selects
+                li: a(href="demo/forms/basic#demo-title-4") Default checkbox & radio
+                li: a(href="demo/forms/basic#demo-title-5") Custom checkbox & radio
+        .demo-panel__section
+            ul.demo-panel__list
+                li: a(href="demo/forms/basic#") On the top

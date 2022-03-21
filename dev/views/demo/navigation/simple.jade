@@ -1,0 +1,60 @@
+extends ../../_global/_demo-layout
+
+block vars
+    - pageTitle = "breadcrumb-list"
+    - pageName = "breadcrumb-list"
+
+block page
+    .layout-main
+
+        .demo-row
+            .demo-title#demo-title-1 Breadcrumb list
+            .demo-sub-title  Live example:
+            .demo-live-example
+                include ../../components/navigation/_breadcrumb-list.jade
+            .demo-sub-title Комментарии:
+                .demo-desc
+                    a(href="https://search.google.com/structured-data/testing-tool/u/0/" target="_black") Проверка структурирования данных от Google
+                    br
+                    a(href="https://old.webmaster.yandex.com/microtest.xml" target="_black") Проверка структурирования данных от Yandex
+
+            .demo-sub-title  Jade code:
+                pre(class="brush: js; gutter: false")
+                    |ol.breadcrumblist(itemscope, itemtype="http://schema.org/BreadcrumbList")
+                    |    li.breadcrumblist__item(itemprop="itemListElement", itemscope, itemtype="http://schema.org/ListItem")
+                    |        a.link(itemscope, itemtype="http://schema.org/Thing", itemprop="item", href="#")
+                    |            span(itemprop="name") Books
+                    |        meta(itemprop="position", content="1")
+                    |    li.breadcrumblist__item(itemprop="itemListElement", itemscope, itemtype="http://schema.org/ListItem")
+                    |        a.link(itemscope, itemtype="http://schema.org/Thing", itemprop="item", href="#")
+                    |            span(itemprop="name") Science Fiction
+                    |        meta(itemprop="position", content="2")
+                    |    li.breadcrumblist__item(itemprop="itemListElement", itemscope, itemtype="http://schema.org/ListItem")
+                    |        span.breadcrumblist__active(itemscope, itemtype="http://schema.org/Thing", itemprop="item")
+                    |            span(itemprop="name") Ancillary Justice
+                    |        meta(itemprop="position", content="3")
+
+            .demo-sub-title Dependencies:
+                .demo-desc
+                    | - static/sass/components/navigation/_breadcrumb-list.scss
+            .demo-sub-title Dependencies not required:
+                .demo-desc
+                    | - views/components/navigation/_breadcrumb-list.jade<br>
+            .demo-sub-title  Include Jade:
+                pre(class="brush: js; gutter: false")
+                    |include components/navigation/_breadcrumb-list.jade
+            .demo-sub-title  Include SCSS:
+                pre(class="brush: js; gutter: false")
+                    |@import "components/navigations/breadcrumb-list";
+
+    .demo-panel.demo-panel_inner
+        .demo-panel__section
+            demo-panel__title ON THIS PAGE:
+            ul.demo-panel__list
+                li: a(href="demo/navigation/breadcrumb-list#demo-title-1") Breadcrumb list
+        .demo-panel__section
+            ul.demo-panel__list
+                li: a(href="demo/navigation/breadcrumb-list#") On the top
+
+
+

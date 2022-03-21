@@ -1,0 +1,56 @@
+@import "../base/layout/_grid";
+
+// --------------------------------------
+// Demo grid
+// --------------------------------------
+
+.demo-grid-row-layout {
+  @include make-row();
+
+  .demo-grid-col-layout-1 {
+    @include make-col(8);
+    background: #006699;
+    padding: 10px;
+    color: #fff;
+  }
+
+  .demo-grid-col-layout-2 {
+    @include make-col(4);
+    background: #008200;
+    padding: 10px;
+    color: #fff;
+  }
+}
+
+
+.demo-grid-row-layout-2 {
+
+  @include make-row();
+
+  @include breakpoint(m) {
+    flex-direction: column;
+  }
+  .demo-grid-col-layout-1 {
+    @include make-col(8);
+    background: #006699;
+    padding: 10px;
+    color: #fff;
+
+    @include breakpoint(m) {
+      @include make-col(12);
+    }
+  }
+
+  .demo-grid-col-layout-2 {
+    @include make-col(4);
+    background: #008200;
+    padding: 10px;
+    color: #fff;
+
+    @include breakpoint(m) {
+      @include make-col(12);
+    }
+
+  }
+
+}

@@ -1,0 +1,209 @@
+extends ../../_global/_demo-layout
+
+block vars
+    - pageTitle = "Form components"
+    - pageName = "demo-forms-layouts"
+
+block page
+    .layout-main
+
+        .demo-row
+            .demo-title#demo-title-1 Общие замечания
+            .demo-desc
+                | - layoutы построены на flexbox модели<br>
+                | - можно использовать как grid, так обойтись и без сеток
+
+        .demo-row
+            .demo-title#demo-title-2 Vertical layout (labels on the top)
+            .demo-sub-title  Live example:
+            .demo-live-example
+                form(action="#" method="post")
+                    fieldset.layout-form-vert-1
+                        .layout-form-row
+                            label(for="input1") Label 1
+                            input.input(type="text" id="input1" value="")
+                        .layout-form-row
+                            label(for="input2") Label 2
+                            input.input(type="text" id="input2" value="")
+                        .layout-form-row
+                            input.button(type="submit" value="Save")
+
+
+            .demo-sub-title  Jade code:
+            pre(class="brush: js; gutter: false")
+                | form(action="#" method="post")
+                |   fieldset.layout-form-vert-1
+                |       .layout-form-row
+                |           label(for="input1") Label 1
+                |           input.input(type="text" id="input1" value="")
+                |       .layout-form-row
+                |           label(for="input2") Label 2
+                |           input.input(type="text" id="input2" value="")
+                |       .layout-form-row
+                |           input.button(type="submit" value="Save")
+            .demo-sub-title Imports SCSS:
+            pre(class="brush: js; gutter: false")
+                | @import "components/forms/layout-vert-1";
+
+
+        .demo-row
+            .demo-title#demo-title-3 Vertical layout (labels on the left)
+            .demo-sub-title  Live example:
+            .demo-live-example
+                form(action="#" method="post")
+                    fieldset.layout-form-vert-2
+                        .layout-form-row
+                            label(for="input21") Label 1
+                            input.input(type="text" id="input21" value="")
+                        .layout-form-row
+                            label(for="input22") Label 2
+                            input.input(type="text" id="input22" value="")
+                        .layout-form-row
+                            input.button(type="submit" value="Save")
+
+
+            .demo-sub-title  Jade code:
+            pre(class="brush: js; gutter: false")
+                | form(action="#" method="post")
+                |    fieldset.layout-form-vert-2
+                |       .layout-form-row
+                |           label(for="input21") Label 1
+                |               input.input(type="text" id="input21" value="")
+                |                   .layout-form-row
+                |                       label(for="input22") Label 2
+                |                       input.input(type="text" id="input22" value="")
+                |                   .layout-form-row
+                |                       input.button(type="submit" value="Save")
+            .demo-sub-title Imports SCSS:
+            pre(class="brush: js; gutter: false")
+                | @import "components/forms/layout-vert-2";
+
+
+        .demo-row
+            .demo-title#demo-title-4 Inline layout
+            .demo-sub-title  Live example with labels:
+            .demo-live-example
+                form(action="#" method="post")
+                    fieldset.layout-form-inline
+                        .layout-form-row
+                            label(for="input41") Label 1
+                            input.input(type="text" id="input41" value="")
+                        .layout-form-row
+                            label(for="input42") Label 2
+                            input.input(type="text" id="input42" value="")
+                        .layout-form-row
+                            input.button(type="submit" value="Save")
+
+            .demo-sub-title  Live example without labels:
+            .demo-live-example
+                form(action="#" method="post")
+                    fieldset.layout-form-inline
+                        .layout-form-row
+                            input.input(type="text" placeholder="label 1"  value="")
+                        .layout-form-row
+                            input.input(type="text" placeholder="label 2" value="")
+                        .layout-form-row
+                            input.checkbox(id="checkbox-name" type="checkbox" value="true" checked="")
+                            label(for="checkbox-name") Checkbox with a label
+                        .layout-form-row
+                            input.button(type="submit" value="Save")
+
+            .demo-sub-title  Jade code:
+                pre(class="brush: js; gutter: false")
+                    |form(action="#" method="post")
+                    |    fieldset.layout-form-inline
+                    |        .layout-form-row
+                    |            label(for="input41") Label 1
+                    |            input.input(type="text" id="input41" value="")
+                    |        .layout-form-row
+                    |            label(for="input42") Label 2
+                    |            input.input(type="text" id="input42" value="")
+                    |        .layout-form-row
+                    |            input.button(type="submit" value="Save")
+            .demo-desc
+                | - Для варианта без labels код идентичный предыдущему, просто удалены labels
+            .demo-sub-title Imports SCSS:
+                pre(class="brush: js; gutter: false")
+                    | @import "components/forms/layout-inline";
+
+        .demo-row
+            .demo-title#demo-title-5 Two columns example
+            .demo-desc
+                | - Используется в комбинации с ver-1, vert-2, inline layoutами
+            .demo-sub-title  Live example:
+            .demo-live-example
+                form.layout-form-column(action="#" method="post")
+                    fieldset.layout-form-col-1
+                        .layout-form-vert-1
+                            .layout-form-row
+                                label(for="input31") Label 1
+                                input.input(type="text" id="input31" value="")
+                            .layout-form-row
+                                .layout-form-inline
+                                    .layout-form-row
+                                        label(for="input32") Label 2
+                                        input.input(type="text" id="input32" value="")
+                                    .layout-form-row
+                                        label(for="input32") Label 3
+                                        input.input(type="text" id="input33" value="")
+
+                    fieldset.layout-form-col-1
+                        .layout-form-vert-1
+                            .layout-form-row
+                                label(for="input34") Label 4
+                                input.input(type="text" id="input34" value="")
+                            .layout-form-row
+                                label(for="input35") Label 5
+                                input.input(type="text" id="input35" value="")
+
+                    fieldset.layout-form-col-2
+                        .layout-form-row
+                            input.button(type="submit" value="Save")
+
+
+            .demo-sub-title  Jade code:
+            pre(class="brush: js; gutter: false")
+                |form.layout-form-column(action="#" method="post")
+                |    fieldset.layout-form-col-1
+                |        .layout-form-vert-1
+                |            .layout-form-row
+                |                label(for="input31") Label 1
+                |                input.input(type="text" id="input31" value="")
+                |&nbsp;
+                |            .layout-form-row
+                |                .layout-form-inline
+                |                    .layout-form-row
+                |                        label(for="input32") Label 2
+                |                        input.input(type="text" id="input32" value="")
+                |                    .layout-form-row
+                |                        label(for="input32") Label 3
+                |                        input.input(type="text" id="input33" value="")
+                |&nbsp;
+                |    fieldset.layout-form-col-1
+                |        .layout-form-vert-1
+                |            .layout-form-row
+                |                label(for="input34") Label 4
+                |                input.input(type="text" id="input34" value="")
+                |            .layout-form-row
+                |                label(for="input35") Label 5
+                |                input.input(type="text" id="input35" value="")
+                |&nbsp;
+                |    fieldset.layout-form-col-2
+                |        .layout-form-row
+                |            input.button(type="submit" value="Save")
+            .demo-sub-title Imports SCSS:
+            pre(class="brush: js; gutter: false")
+                | @import "components/forms/layout-column";
+
+    .demo-panel.demo-panel_inner
+        .demo-panel__section
+            demo-panel__title ON THIS PAGE:
+            ul.demo-panel__list
+                li: a(href="demo/forms/layouts#demo-title-1") Общие замечания
+                li: a(href="demo/forms/layouts#demo-title-2") Vertical layout (labels on the top)
+                li: a(href="demo/forms/layouts#demo-title-3") Vertical layout (labels on the left)
+                li: a(href="demo/forms/layouts#demo-title-4") Inline layout
+                li: a(href="demo/forms/layouts#demo-title-5") Columns example
+        .demo-panel__section
+            ul.demo-panel__list
+                li: a(href="demo/forms/layouts#") On the top

@@ -1,0 +1,40 @@
+.header {
+  position: relative;
+
+  background: url(../img/header/header-img.jpg) no-repeat;
+  background-size: cover;
+  height: 900px;
+
+  @media (max-width: 1024px) {
+    background: url(../img/header/phone_horizontal.jpg) no-repeat;
+    height: 750px;
+  }
+
+  @include breakpoint(s) {
+    background: url(../img/header/header-img-tablet.jpg) no-repeat;
+    height: 670px;
+  }
+
+  @media (max-width: 375px) {
+    background: url(../img/header/header-img-mob.jpg) no-repeat;
+  }
+  @media (max-width: 365px) {
+    height: 568px;
+  }
+}
+.header__logo {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+
+  @include breakpoint(m) {
+    left: 30px;
+  }
+
+  @include breakpoint(s) {
+    width: 81px;
+    top: 20px;
+    left: 14px;
+  }
+
+}

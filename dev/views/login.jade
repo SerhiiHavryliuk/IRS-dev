@@ -1,0 +1,24 @@
+extends _global/_layout
+
+block vars
+    -pageTitle ="Логин"
+    -pageName ="login"
+
+block page
+    .irs__login-wrap
+        .irs__login-close
+            a(href="#"): img(src="img/registration/close.png" alt="")
+        h1.title.irs__login-title Добро пожаловать в международную резервную систему
+        .irs__login
+            form.irs__login-form-wrap(action="#" method="post")
+                fieldset.layout-form-vert-1
+                    .layout-form-row
+                        label(for="email") E-mail
+                        input.input(type="email" id="email")
+                    .layout-form-row
+                        label(for="password") Пароль
+                        input.input(type="password" id="password")
+
+                .irs__login-button
+                    input.button(type="submit" value="Вход")
+                a.link.irs__login-forget-pass(href="#") Забыли пароль?

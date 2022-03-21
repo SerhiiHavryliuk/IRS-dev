@@ -1,0 +1,15 @@
+
+.breadcrumblist__item {
+  display: inline-block;
+}
+
+.breadcrumblist__item:after {
+  content: "\003E";
+  margin: 0 5px;
+}
+.breadcrumblist__item:first-child {
+  margin-left: 0;
+}
+.breadcrumblist__item:last-child:after {
+  content: "";
+}

@@ -1,0 +1,36 @@
+// =============================================================================
+// Global templates of selectors
+// =============================================================================
+
+//@import "var.scss";
+
+%reset-input {
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  background: none;
+  text-transform: none;
+  line-height: normal;
+  outline: none;
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+%reset-appereance {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+%align-middle {
+  &:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+
+  }
+}

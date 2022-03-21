@@ -1,0 +1,60 @@
+// ------------------------------------------------------
+// Font families
+//-------------------------------------------------------
+@include font-face("SFUIDisplay-Regular", "../fonts/SFUIDisplay-Regular");
+@include font-face("SFUIDisplay-Medium", "../fonts/SFUIDisplay-Medium");
+@include font-face("SFUIDisplay-Black", "../fonts/SFUIDisplay-Black");
+
+$font-family-default: "SFUIDisplay-Regular";
+$font-family-text:    $font-family-default;
+$font-family-titles:  "SFUIDisplay-Black";
+
+$font-family-regular:  "SFUIDisplay-Regular";
+$font-family-medium:   "SFUIDisplay-Medium";
+$font-family-black:    "SFUIDisplay-Black";
+
+
+// ------------------------------------------------------
+// Font sizes and line height
+//-------------------------------------------------------
+
+// example for responsive
+// more info https://www.smashingmagazine.com/2015/06/responsive-typography-with-sass-maps/
+$font-size-text-default: (
+        xs: (12px, 15px),
+        m:  (14px, 18px),
+        l:  (14px, 18px)
+);
+$font-size-main-title: (
+        xs: (18px, 22px),
+        m:  (24px, 28px),
+        l:  (25px, 30px)
+);
+$font-size-secondary-title: (
+        xs: (16px, 20px),
+        m:  (21px, 25px),
+        l:  (22px, 26px)
+);
+$font-size-control: (
+        xs: (14px),
+        m:  (15px),
+        l:  (16px)
+);
+
+$font-size-16: 16px;
+$font-size-18: 18px;
+$font-size-20: 20px;
+$font-size-50: 50px;
+
+
+// ------------------------------------------------------
+// Colors
+//-------------------------------------------------------
+$color-titles:           #1f2220;
+$color-titles-secondary: #1f2220;;
+$color-text-default:  black;
+$color-text-light:    #333;
+$color-text-white:   #fff;
+
+$color-link-default:       #1cbb69;
+$color-link-default-hover: $color-primary;

@@ -1,0 +1,57 @@
+extends ../../_global/_demo-layout
+
+block vars
+    - pageTitle = "menu"
+    - pageName = "menu"
+
+block page
+    .layout-main
+
+        .demo-row
+            .demo-title#demo-title-1 Simple horizontal menu
+            .demo-sub-title  Live example:
+            .demo-live-example
+                include ../../components/navigation/_menu-simple-horizontal
+            .demo-sub-title Комментарии:
+                .demo-desc
+                    | - по умолчанию пункты меню выровнены по центру <br>
+                    | - изменть лего на влево/вправо задав text-align для .main-menu <br>
+                    | - активный пункт может быть как ссылкой, так и текстом
+            .demo-sub-title  Jade code:
+                pre(class="brush: js; gutter: false")
+                    |nav.main-menu
+                    |    input.main-menu__mob-btn-check(id="main-menu__show-menu" type="checkbox")
+                    |    label.main-menu__mob-btn(for="main-menu__show-menu") &times;
+                    |    ul.main-menu__list
+                    |        li.main-menu__item: a(href="#").main-menu__link Item 1
+                    |        li.main-menu__item: a(href="#").main-menu__link Item 2 some longer
+                    |        li.main-menu__item: a(href="#").main-menu__link Item 3 shoter
+                    |        li.main-menu__item.main-menu__active: a(href="#").main-menu__link Active item
+            .demo-sub-title Dependencies:
+                .demo-desc
+                    | - static/sass/components/navigation/_menu-simple-horizontal.scss<br>
+                    | - static/sass/base/layout/_mixins.scss<br>
+                    | - static/sass/base/_var.scss<br>
+            .demo-sub-title  Include Jade:
+                pre(class="brush: js; gutter: false")
+                    | include components/navigation/_menu-simple-horizontal
+            .demo-sub-title  Include SCSS:
+                pre(class="brush: js; gutter: false")
+                    | @import "components/navigations/_menu-simple-horizontal";
+
+
+        .demo-row
+            .demo-title#demo-title-2 Horizontal menu with dropdown
+            .demo-sub-title  Live example:
+            .demo-live-example
+                include ../../components/navigation/_menu-horizontal-with-dropdown
+
+
+    .demo-panel.demo-panel_inner
+        .demo-panel__section
+            demo-panel__title ON THIS PAGE:
+            ul.demo-panel__list
+                li: a(href="demo/navigation/menu#demo-title-1") Simple horizontal menu
+        .demo-panel__section
+            ul.demo-panel__list
+                li: a(href="demo/navigation/menu#") On the top

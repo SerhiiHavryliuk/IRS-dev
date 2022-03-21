@@ -1,0 +1,149 @@
+extends ../../_global/_demo-layout
+include ../../components/cards/_text-card-1
+
+block vars
+    - pageTitle = "Text cards"
+    - pageName = "demo-cards-text"
+
+block page
+    .layout-main
+
+        .demo-row
+            .demo-title#demo-title-1 Обшие комментарии
+            .demo-desc
+                | - в scss зашиты стили для трех варинтов расположения картиноки + для варианта адаптивной смены картинки<br>
+                | - не используемое необходимо удалить<br>
+                | - комментарии по переменным в view/components/cards/_text-card-1
+
+        .demo-row
+            .demo-title#demo-title-2 Card with pic on the top
+            .demo-sub-title  Live example:
+            .demo-live-example
+                +t-card-1({
+                    type        : "top",
+                    titleText   : "Lorem ipsum dolor sit amet",
+                    picDesktop  : "pic/catalog/item-1.png",
+                    picMobile   : "pic/catalog/item-1-m.jpg",
+                    href        : "#",
+                    desc        : "Nulla aute, ad ut esse sed, do sint aliqua ea? Ut, quis excepteur amet, culpa magna aute ad dolor do.",
+                    date        : "12.02.2016",
+                    datetime    : "2016-02-12"
+                })
+
+            .demo-sub-title  Jade code:
+                pre(class="brush: js; gutter: false")
+                    |+t-card-1({
+                    |    type       : "top",
+                    |    titleText  : "Lorem ipsum dolor sit amet",
+                    |    picDesktop : "pic/catalog/item-1.png",
+                    |    picMobile  : "pic/catalog/item-1-m.jpg",
+                    |    href       : "#",
+                    |    desc       : "Nulla aute, ad ut esse sed, do sint aliqua ea? Ut, quis excepteur amet, culpa magna aute ad dolor do.",
+                    |    date       : "12.02.2016",
+                    |    datetime   : "2016-02-12"
+                    |})
+
+        .demo-row
+            .demo-title#demo-title-3 Card with pic on the left
+            .demo-sub-title  Live example:
+            .demo-live-example
+                +t-card-1({
+                    type        : "left",
+                    titleText   : "Lorem ipsum dolor sit amet",
+                    picDesktop  : "pic/catalog/item-1.png",
+                    picMobile   : "pic/catalog/item-1-m.jpg",
+                    href        : "#",
+                    desc        : "Nulla aute, ad ut esse sed, do sint aliqua ea? Ut, quis excepteur amet, culpa magna aute ad dolor do.",
+                    date        : "12.02.2016",
+                    datetime    : "2016-02-12"
+                })
+            .demo-sub-title  Jade code:
+                pre(class="brush: js; gutter: false")
+                    | +t-card-1({
+                    |    type       : "left",
+                    |    titleText  : "Lorem ipsum dolor sit amet",
+                    |    picDesktop : "pic/catalog/item-1.png",
+                    |    picMobile  : "pic/catalog/item-1-m.jpg",
+                    |    href       : "#",
+                    |    desc       : "Nulla aute, ad ut esse sed, do sint aliqua ea? Ut, quis excepteur amet, culpa magna aute ad dolor do.",
+                    |    date       : "12.02.2016",
+                    |    datetime   : "2016-02-12"
+                    | })
+
+        .demo-row
+            .demo-title#demo-title-4 Card with pic on the right
+            .demo-sub-title  Live example:
+            .demo-live-example
+                +t-card-1({
+                    type        : "right",
+                    titleText   : "Lorem ipsum dolor sit amet",
+                    picDesktop  : "pic/catalog/item-1.png",
+                    picMobile   : "pic/catalog/item-1-m.jpg",
+                    href        : "#",
+                    desc        : "Nulla aute, ad ut esse sed, do sint aliqua ea? Ut, quis excepteur amet, culpa magna aute ad dolor do.",
+                    date        : "12.02.2016",
+                    datetime    : "2016-02-12"
+                })
+            .demo-sub-title  Jade code:
+                pre(class="brush: js; gutter: false")
+                    | +t-card-1({
+                    |    type       : "right",
+                    |    titleText  : "Lorem ipsum dolor sit amet",
+                    |    picDesktop : "pic/catalog/item-1.png",
+                    |    picMobile  : "pic/catalog/item-1-m.jpg",
+                    |    href       : "#",
+                    |    desc       : "Nulla aute, ad ut esse sed, do sint aliqua ea? Ut, quis excepteur amet, culpa magna aute ad dolor do.",
+                    |    date       : "12.02.2016",
+                    |    datetime   : "2016-02-12"
+                    | })
+
+        .demo-row
+            .demo-title#demo-title-5 Card without pic
+            .demo-sub-title  Live example:
+            .demo-live-example
+                +t-card-1({
+                    type: "without",
+                    titleText: "Lorem ipsum dolor sit amet",
+                    href: "#",
+                    desc: "Nulla aute, ad ut esse sed, do sint aliqua ea? Ut, quis excepteur amet, culpa magna aute ad dolor do.",
+                    date: "12.02.2016",
+                    datetime: "2016-02-12"
+                })
+            .demo-sub-title  Jade code:
+                pre(class="brush: js; gutter: false")
+                    |+t-card-1({
+                    |    type       : "without",
+                    |    titleText  : "Lorem ipsum dolor sit amet",
+                    |    href       : "#",
+                    |    desc       : "Nulla aute, ad ut esse sed, do sint aliqua ea? Ut, quis excepteur amet, culpa magna aute ad dolor do.",
+                    |    date       : "12.02.2016",
+                    |    datetime   : "2016-02-12"
+                    |})
+
+        .demo-row
+            .demo-sub-title Dependencies:
+                .demo-desc
+                    | - view/components/cards/_text-card-1.jade<br>
+                    | - static/sass/components/cards/_text-card-1.scss
+            .demo-sub-title Dependencies not required:
+                .demo-desc
+                    | - static/sass/base/layout/_grid // если используется left or right типы<br>
+            .demo-sub-title  Include Jade:
+                pre(class="brush: js; gutter: false")
+                    | include components/cards/_text-card-1
+            .demo-sub-title  Include SCSS:
+                pre(class="brush: js; gutter: false")
+                    | @import "components/cards/_text-card-1";
+
+    .demo-panel.demo-panel_inner
+        .demo-panel__section
+            demo-panel__title ON THIS PAGE:
+            ul.demo-panel__list
+                li: a(href="demo/cards/text#demo-title-1") Gegeral comments
+                li: a(href="demo/cards/text#demo-title-2") Pic on the top
+                li: a(href="demo/cards/text#demo-title-3") Pic on the left
+                li: a(href="demo/cards/text#demo-title-4") Pic on the right
+                li: a(href="demo/cards/text#demo-title-5") Without pic
+        .demo-panel__section
+            ul.demo-panel__list
+                li: a(href="demo/cards/text#") On the top

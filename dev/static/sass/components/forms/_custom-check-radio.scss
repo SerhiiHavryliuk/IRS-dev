@@ -1,0 +1,86 @@
+// =============================================================================
+// .custom-checkbox
+// =============================================================================
+
+.custom-checkbox {
+  display: inline-block;
+}
+.custom-checkbox input {
+  border: 0 none;
+  clip: rect(0px, 0px, 0px, 0px);
+  height: 1px;
+  left: -1000px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  z-index: -1000;
+}
+.custom-checkbox label {
+  display: inline-block;
+
+  margin-left: 34px;
+  min-height: 19px;
+  position: relative;
+}
+.custom-checkbox label:before {
+  content: "";
+  display: block;
+  height: 19px;
+  width: 19px;
+  overflow: hidden;
+
+  background: url("http://csscheckbox.com/checkboxes/u/csscheckbox_cc483c9d8cd8f37fc10726a14959a7d0.png") no-repeat;
+  cursor: pointer;
+
+  position: absolute;
+  left: -34px;
+  top: 0;
+}
+.custom-checkbox input:checked + label:before {
+  background-position: 0 -19px;
+}
+
+.custom-checkbox_disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+// =============================================================================
+// .custom-radio
+// =============================================================================
+.custom-radio {
+  display: none;
+}
+.custom-radio + label {
+  display: inline-block;
+
+  margin-left: 34px;
+  min-height: 19px;
+  position: relative;
+}
+.custom-radio + label:before {
+  content: "";
+  display: block;
+  height: 19px;
+  width: 19px;
+  overflow: hidden;
+
+  background: url("http://csscheckbox.com/checkboxes/u/csscheckbox_cc483c9d8cd8f37fc10726a14959a7d0.png") no-repeat;
+  cursor: pointer;
+
+  position: absolute;
+  left: -34px;
+  top: 2px;
+}
+.custom-radio:checked + label:before {
+  background-position: 0 -19px;
+}
+
+.custom-radio:disabled {
+  &+label {
+    opacity: .4;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,80 @@
+extends _global/_demo-layout
+
+
+block vars
+    - pageTitle = "Components"
+    - pageName = "components"
+
+block page
+    .layout-main
+
+        .demo-row
+            .demo-title Menu
+            div(style="position:relative")
+                include components/navigation/_menu-simple-horizontal
+
+        .demo-row
+            .demo-title Base styles
+            include components/_base
+
+        form(action="php/ajax-form.json" method="get" data-ajax="true" data-type-popup='{"type": "empty", "bgVis": true, "pos": "center"}')
+            div
+                h2.title.title_secondary AJAX form example
+            div
+                input.input(type="text" placeholder="enter your text" value="")
+            div
+                input.button(type="submit" value="Send ajax form")
+         hr
+
+        h2.title.title_secondary Show Static Popup example
+        input.button.show-popup(type="button" value="show popup" data-type-popup='{"type": "htmlTemplate", "idTemplate": "example-popup-content", "bgVis": false, "pos": "near"}')
+        div.popup-template#example-popup-content
+            div.popup-content-example Text from content<br> popup example
+        hr
+
+        ul.social
+            li: a(href="#").fa.fa-vk
+            li: a(href="#").fa.fa-facebook
+            li: a(href="#").fa.fa-twitter
+            li: a(href="#").fa.fa-odnoklassniki
+        hr
+
+        // icon__pic можно использовать как для awesome так и для графики
+        // оставляем пустой span для иконки, чтобы подчеркивание при ховере можно было оставить только под текстом
+        span.icon
+            span.icon__t some text with icons
+            span.icon__p.fa.fa-phone
+        hr
+
+        //- var data = {title: "“Тайна желтой подлодки”", pic:"pic/catalog/item-1.png", href: "#", price: "$120", desc: "Lorem ipsum dolor sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua."}
+        //+item-card(data)
+        hr
+
+        h2.title_secondary Список карточек waterfall
+        .layout-list_waterfall
+            //- var data = {title: "“Тайна желтой подлодки”", pic:"pic/catalog/item-1.png", href: "#", price: "$120", desc: "Lorem ipsum dolor sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua. sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua."}
+            //+item-card(data)
+            //- var data = {title: "“Тайна желтой подлодки”", pic:"pic/catalog/item-1.png", href: "#", price: "$120", desc: "Lorem ipsum dolor sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua. sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua. sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua. sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua. sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua."}
+            //+item-card(data)
+            //- var data = {title: "“Тайна желтой подлодки”", pic:"pic/catalog/item-1.png", href: "#", price: "$120", desc: "Lorem ipsum dolor sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua."}
+            //+item-card(data)
+            //- var data = {title: "“Тайна желтой подлодки”", pic:"pic/catalog/item-1.png", href: "#", price: "$120", desc: "Lorem ipsum dolor sit amet, sed do mod tempor incididuntunt ut labore et doloredfgd dfg dfgd gna aliqua."}
+            //+item-card(data)
+            //- var data = {title: "“Тайна желтой подлодки”", pic:"pic/catalog/item-1.png", href: "#", price: "$120", desc: "Lorem ipsum dolor sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua. sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua. sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua. sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua. sit amet, idunt ut labore et dolore gna aliqua."}
+            //+item-card(data)
+            //- var data = {title: "“Тайна желтой подлодки”", pic:"pic/catalog/item-1.png", href: "#", price: "$120", desc: "Lorem ipsum dolor sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua."}
+            //+item-card(data)
+            //- var data = {title: "“Тайна желтой подлодки”", pic:"pic/catalog/item-1.png", href: "#", price: "$120", desc: "Lorem ipsum dolor sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua. sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua."}
+            //+item-card(data)
+            //- var data = {title: "“Тайна желтой подлодки”", pic:"pic/catalog/item-1.png", href: "#", price: "$120", desc: "Lorem ipsum dolor sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua. sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua. sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua. sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua. sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua."}
+            //+item-card(data)
+            //- var data = {title: "“Тайна желтой подлодки”", pic:"pic/catalog/item-1.png", href: "#", price: "$120", desc: "Lorem ipsum dolor sit amet, sed do mod tempor incididunt ut labore et dolore gna aliqua."}
+            //+item-card(data)
+        hr
+
+        .quantity
+            .button.quantity__add +
+            .quantity__numeric 15
+            .button.quantity__dec −
+
+        hr

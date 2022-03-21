@@ -1,0 +1,91 @@
+@import "var";
+@import "mixins";
+
+
+// =============================================================================
+// Global settings
+// =============================================================================
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+  min-width: 320px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.layuot-global {
+  min-height: 100%;
+  //padding-bottom: $size-footer-height;
+  //padding-bottom: 340px;
+  text-align: center;
+}
+
+.layout-main {
+  max-width: $size-site-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  padding-left: 90px;
+  //padding-right: 30px;
+  //border: 1px solid green;
+
+  @include breakpoint(m) {
+    padding-left: 50px;
+  }
+  @include breakpoint(s) {
+    padding-left: 25px;
+  }
+}
+
+.layout-main-irs {
+  max-width: $size-site-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  padding-left: 90px;
+  padding-right: 30px;
+
+  @include breakpoint(m) {
+    padding-left: 50px;
+  }
+  @include breakpoint(s) {
+    padding-left: 25px;
+  }
+}
+.layout-footer {
+  max-width: $size-site-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (max-width: 1100px) {
+    padding: 0;
+  }
+
+  @include breakpoint(m) {
+    margin-top: -22px;
+  }
+}
+
+//.layout-system {
+//  max-width: $size-site-max-width;
+//  margin-left: auto;
+//  margin-right: auto;
+//  text-align: left;
+//}
+
+// =============================================================================
+// Global classes
+// =============================================================================
+.noscroll {
+  overflow: hidden;
+}

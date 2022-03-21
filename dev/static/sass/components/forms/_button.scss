@@ -1,0 +1,31 @@
+// =============================================================================
+// .button
+// .button-small
+// =============================================================================
+
+.button {
+  display: inline-block;
+  height: $size-controls-height;
+
+  @include font-size($font-size-control);
+  line-height: $size-controls-height;
+
+  background-color: $color-primary;
+  color: $color-bg;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+}
+
+.button:disabled,
+.button_disabled {
+  cursor: auto;
+  opacity: .4;
+  pointer-events: none;
+}

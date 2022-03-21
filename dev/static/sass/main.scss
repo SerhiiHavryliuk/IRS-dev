@@ -1,0 +1,33 @@
+// =============================================================================
+// Need for all pages
+// to plug always first
+// =============================================================================
+
+@import "base/functions";
+@import "base/var";
+@import "base/temp-selectors";
+@import "base/reset";
+@import "base/layout/_layout";
+@import "base/typography/_typography";
+@import "base/base";
+@import "base/typography/_var";
+
+// ---------------------------------
+// import components here
+// ---------------------------------
+@import "components/header";
+@import "components/footer";
+
+@import "components/lists/_lists";
+@import "node_modules/font-awesome/scss/font-awesome.scss";
+
+@import "components/components";
+@import "components/social";
+
+@import "components/popup";
+
+@import "components/navigations/_menu-simple-horizontal";
+
+@import "_index";
+
+

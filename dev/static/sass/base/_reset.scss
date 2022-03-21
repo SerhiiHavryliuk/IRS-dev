@@ -1,0 +1,204 @@
+// =============================================================================
+// Reset Styles
+// =============================================================================
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, em, img, q, strong, sub, sup, b, u, i,  dl, dt, dd, ol,
+ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption,
+figure, footer, header, menu, nav, section, summary, time, mark, audio, video, address, select, textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    font-size: 100%;
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+        outline: none;
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td, td img {
+    vertical-align: top;
+}
+
+address, article, aside, blockquote, center, dir, div, dd, details, dl, dt, fieldset, figcaption, figure, form, footer,
+frameset, h1, h2, h3, h4, h5, h6, hr, header, main, menu, nav, noframes, noscript, ol, p, pre, section, summary, ul {
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+html {
+    font-size: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+input {
+    @extend %reset-input;
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+        margin: 0;
+    }
+
+
+    &[type="search"] {
+        @extend %reset-appereance;
+
+        &:focus {
+            @extend %reset-appereance;
+        }
+
+        &::-webkit-search-cancel-button {
+            @extend %reset-appereance;
+        }
+    }
+
+    &[type="checkbox"],
+    &[type="radio"] {
+        cursor: pointer;
+    }
+
+    &[type="submit"],
+    &[type="reset"],
+    &[type="button"],
+    &[type="file"] {
+
+        > input {
+            &[type="button"] {
+                &::-moz-focus-inner {
+                    margin: 0;
+                    padding: 0;
+                    border: none;
+                }
+            }
+        }
+
+        &::-moz-focus-inner {
+            margin: 0;
+            padding: 0;
+            border: none;
+        }
+
+    }
+
+    &::-webkit-input-placeholder {
+        color: $color-placeholder;
+    }
+
+    &:-ms-input-placeholder {
+        color: $color-placeholder;
+    }
+
+    &::-moz-placeholder {
+        color: $color-placeholder;
+    }
+
+    &.placeholder {
+        color: $color-placeholder;
+    }
+
+    &:-webkit-autofill {
+        color: transparent !important;
+        background-color: transparent !important;
+        box-shadow: none;
+    }
+
+    &:valid,
+    &:invalid {
+        box-shadow: none;
+        outline: none;
+    }
+
+    &::-webkit-calendar-picker-indicator {
+        @extend %reset-appereance;
+        display: none;
+    }
+
+    &::-ms-clear {
+        display: none;
+    }
+}
+
+select {
+    @extend %reset-input;
+}
+
+button {
+    @extend %reset-input;
+
+    &::-moz-focus-inner {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+}
+
+textarea {
+    @extend %reset-input;
+    overflow: auto;
+    resize: none;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+}
+
+video {
+    max-height: 100%;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}

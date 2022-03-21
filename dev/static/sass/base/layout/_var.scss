@@ -1,0 +1,19 @@
+$size-site-max-width: 1500px;
+$size-footer-height:  270px;
+
+// =============================================================================
+// Breakpoints
+// =============================================================================
+$break-xs:   370px;
+$break-s:   760px;
+$break-m:   1000px;
+$break-l:   1100px;
+$break-xl:  1500px;
+
+$breakpoints: (
+  xs:   $break-xs,
+  s:    $break-s,
+  m:    $break-m,
+  l:    $break-l,
+  xl:   $break-xl
+);

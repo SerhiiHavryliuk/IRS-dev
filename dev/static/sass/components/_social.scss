@@ -1,0 +1,39 @@
+.social {
+  font-size: 0;
+
+
+  li {
+    display: inline-block;
+
+    &:last-child a {
+      margin-right: 0;
+    }
+  }
+
+    a {
+      margin-right: 36px;
+      width: 73px;
+      height: 73px;
+      border-radius: 35px;
+      font-size: 35px;
+      text-align: center;
+      line-height: 73px;
+      text-decoration: none;
+      color: #fff;
+      box-shadow:  0 0 4px rgba(0,0,0,0.2);
+    }
+
+}
+
+.fa-vk {
+  background: $color-primary;
+}
+.fa-facebook {
+  background: $color-primary;
+}
+.fa-twitter {
+  background: $color-primary;
+}
+.fa-youtube-play {
+  background: $color-primary;
+}

@@ -1,0 +1,26 @@
+if (build)
+    script(src="js/lib/jquery.min.js")
+    script(src="js/lib/lib.min.js")
+    script(src="js/main.min.js")
+    //script(src="js/lib/jquery.wookmark.js")
+    if(pageName == "index")
+        script(src="js/animation.js")
+
+    if(pageName == "registration")
+        script(src="js/registration.js")
+else
+    script(src="js/lib/jquery.min.js")
+    script(src="js/lib/_jquery.select.js")
+    script(src="js/lib/_jquery.quantity.js")
+    script(src="js/_main.js")
+    script(src="js/_module.popup.js")
+    script(src="js/_module.main.js")
+    script(src="js/lib/jquery.wookmark.js")
+
+    if(pageName == "index")
+        script(src="js/animation.js")
+
+    if(pageName == "registration")
+        script(src="js/lib/_jquery.selectric.js")
+        script(src="js/registration.js")
+

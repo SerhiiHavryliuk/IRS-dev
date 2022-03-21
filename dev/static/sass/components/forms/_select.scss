@@ -1,0 +1,90 @@
+// =============================================================================
+// .select
+// =============================================================================
+
+.select {
+  border: 1px solid $color-controls-border;
+  height: $size-controls-height;
+  padding: 0 11px;
+  background-color: white;
+
+  &:focus {
+    background-color: $color-controls-focus;
+  }
+
+}
+
+
+
+// =============================================================================
+// .select-custom
+// =============================================================================
+
+.custom-select-wrap {
+  border: 1px solid $color-controls-border;
+  height: $size-controls-height;
+
+  width: auto;
+  padding-right: 36px;
+  min-width: 150px;
+  position: relative;
+  display: inline-block;
+  color: #999;
+  font-size: $font-size-16;
+  background-color: white;
+  padding-top: 5px;
+}
+
+.custom-select-wrap select {
+  height: 100%;
+  opacity: 0;
+  position: relative;
+  width: calc(100% + 36px);
+  cursor: pointer;
+  color: black;
+
+  option {
+    display: block;
+    //background-color: $color-primary;
+    color: red;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 50px;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: $color-primary;
+      color: black;
+    }
+  }
+}
+
+
+.custom-select-wrap_disabled {
+  opacity: .4;
+
+  select {
+    cursor: default;
+  }
+}
+
+.custom-select-text::after {
+  background: rgba(0, 0, 0, 0) url("../img/registration/select.png") repeat scroll 0 0;
+  content: "";
+  width: 11px;
+  height: 7px;
+
+  position: absolute;
+  right: 20px;
+  top: 16px;
+}
+.custom-select-text {
+  display: block;
+  line-height: 40px;
+  overflow: hidden;
+  padding: 0 0 0 15px;
+  position: absolute;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}

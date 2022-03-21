@@ -1,0 +1,182 @@
+// =============================================================================
+// .h-menu-dd
+// =============================================================================
+
+.h-menu-dd {
+  position: relative;
+  text-align: center;
+
+  @include breakpoint(s) {
+    &.active {
+      &:before {
+        content: '';
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: $color-bg;
+        opacity: 0.9;
+      }
+    }
+  }
+}
+.h-menu-dd__list {
+
+  @include breakpoint(s) {
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 0.5s;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    -webkit-overflow-scrolling: touch;
+    z-index: 1;
+    background: #f5f5f5;
+
+    padding-top: 20px;
+    text-align: left;
+  }
+
+}
+.h-menu-dd__item {
+  display: inline-block;
+  margin: 0 14px;
+  font-size: 14px;
+  text-transform: uppercase;
+
+
+  @include breakpoint(s) {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #000;
+  }
+}
+.h-menu-dd__active {
+  font-weight: bold;
+}
+.h-menu-dd__link {
+  text-decoration: none;
+
+  &:hover {
+    color: #000;
+  }
+}
+.h-menu-dd__mob-btn {
+  display: none;
+
+  @include breakpoint(s) {
+    font-size: 30px;
+    text-indent: -99px;
+    overflow: hidden;
+    display: block;
+    width: 20px;
+    height: 18px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASAgMAAAAmvhaDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEUAAAAAAAD///+D3c/SAAAAAXRSTlMAQObYZgAAAAFiS0dEAmYLfGQAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAZSURBVAjXYwgFAQYISQwAqnOAkUSqh5kPAO8lCSN/dhooAAAAAElFTkSuQmCC);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+}
+.h-menu-dd__mob-btn-check {
+  display: none;
+  -webkit-appearance: none;
+
+  &:checked ~ .h-menu-dd__mob-btn {
+    background: none;
+    text-indent: 0;
+
+  }
+
+  &:checked ~ .h-menu-dd__list {
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.5s;
+  }
+}
+
+
+// =============================================================================
+// sub menu
+// =============================================================================
+.h-menu-dd__layout-sub-menu {
+  position: absolute;
+  width: 100%;
+  left: 0;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  @include make-row(null,flex-start);
+  text-align: left;
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #aaaaaa;
+  text-transform: none;
+
+  @include breakpoint(s) {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+  }
+}
+
+.h-menu-dd__item:hover > .h-menu-dd__layout-sub-menu { // show sub menu for desktop
+
+  opacity: 1;
+  visibility: visible;
+
+  @include breakpoint(s) {
+    display: block;
+  }
+
+}
+
+
+.h-menu-dd__layout-col {
+  width: 20%;
+
+  @include breakpoint(s) {
+    width: 100%;
+  }
+}
+.h-menu-dd__layout-col_promo {
+  width: 40%;
+
+  @include breakpoint(s) {
+    display: none;
+  }
+}
+
+// subment items and links
+.h-menu-dd__layout-sub-menu li {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+// promo block
+.h-menu-dd__layout-promo {
+  position: relative;
+  margin-right: 10px;
+}
+.h-menu-dd__layout-promo-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.7;
+  text-align: center;
+  padding: 10px 0;
+}
+.h-menu-dd__layout-promo {
+  display: inline-block;
+}

@@ -1,0 +1,51 @@
+extends ../../_global/_demo-layout
+
+block vars
+    - pageTitle = "Global typorgraphy"
+    - pageName = "typography"
+
+block page
+    .layout-main
+        .demo-row
+            .demo-title#demo-title-1 Font face
+            .demo-desc
+                | - Если не используются кастомные шрифты, font face удаляем.
+            .demo-sub-title Dependencies:
+                .demo-desc
+                    | - sass/base/typography/_mixins.scss
+
+        .demo-row
+            .demo-title#demo-title-2 Map for adaptivity
+            .demo-desc
+                | - Если нет адаптивности, maps удаляем, используем статичные значения.<br>
+                | - Карта адаптивности на базе заданных шагов в breakpoint
+            .demo-sub-title Dependencies:
+                .demo-desc
+                    | - sass/base/typography/_mixins.scss<br>
+                    | - sass/base/layout/_layout.scss
+            .demo-sub-title Example of SCSS code:
+                pre(class="brush: js; gutter: false")
+                    | // карта адаптивности
+                    | $font-size-main-title: (
+                    |         xs: (18px, 22px),
+                    |         m:  (24px, 28px),
+                    |         l:  (25px, 30px)
+                    | );
+                    | .title {
+                    |   @include font-size($font-size-main-title); // подключение адаптивого размера шрифта
+                    |}
+        .demo-row
+            .demo-title#demo-title-3 Colors
+            .demo-desc
+                | - Как минимум основные цвета должны быть определены на базе глобальных переменных
+
+    .demo-panel.demo-panel_inner
+        .demo-panel__section
+            demo-panel__title ON THIS PAGE:
+            ul.demo-panel__list
+                li: a(href="demo/global-setup/typography#demo-title-1") Font face
+                li: a(href="demo/global-setup/typography#demo-title-2") Map for adaptivity
+                li: a(href="demo/global-setup/typography#demo-title-3") Colors
+        .demo-panel__section
+            ul.demo-panel__list
+                li: a(href="demo/global-setup/typography#") On the top

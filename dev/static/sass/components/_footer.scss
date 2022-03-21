@@ -1,0 +1,315 @@
+@import "../demo/forms-basic";
+
+.footer {
+   background-color: #f6f6fa;
+
+  //=========================================================================
+  //------------------------------- common -----------------------------------
+  //=========================================================================
+  .footer__title  {
+    color: $color-text-light;
+    font-family: $font-family-black;
+    font-size: 16px;
+    line-height: 25px;
+    text-transform: uppercase;
+    margin: 17px 0 25px 0;
+
+    @include breakpoint(m) {
+      margin-bottom: 25px;
+      margin-top: 0;
+    }
+
+    @include breakpoint(s) {
+      line-height: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .footer__column li {
+    color: $color-text-light;
+    font-size: 16px;
+    line-height: 25px;
+
+    @include breakpoint(s) {
+      line-height: 20px;
+    }
+  }
+
+  .footer__column li a {
+    text-decoration: none;
+  }
+
+  //=========================================================================
+  //------------------------------- row-middle -----------------------------------
+  //=========================================================================
+  .footer__row-middle {
+    display: flex;
+    justify-content: space-between;
+    padding: 34px 30px 80px 30px;
+    margin: 40px auto 30px auto;
+    max-width: 1440px;
+    height: 270px;
+
+    @include breakpoint(m) {
+      padding-left: 20px;
+      padding-top: 39px;
+      height: 250px;
+      margin-bottom: 0;
+      max-width: 760px;
+    }
+
+    @include breakpoint(s) {
+      flex-wrap: wrap;
+      padding-left: 20px;
+      padding-right: 20px;
+      height: 310px;
+      max-width: 375px;
+      padding-top: 19px;
+    }
+
+    @media (max-width: 365px) {
+      max-width: 320px;
+    }
+
+    @include breakpoint(xs) {
+      height: 370px;
+    }
+
+    .footer__column {
+      padding: 0 10px;
+
+      @include breakpoint(s) {
+        padding: 5px 0 5px 5px;
+      }
+
+      @media (max-width: 360px) {
+        padding-left: 0;
+        flex: auto;
+        width: 100%;
+      }
+
+    }
+
+    .social {
+      min-width: 210px;
+      margin: 10px 0;
+
+      @include breakpoint(s) {
+        min-width: 135px;
+        width: 135px;
+        padding-right: 0;
+      }
+
+      li a {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        border-radius: 20px;
+        font-size: 17px;
+        margin-right: 13px;
+
+        @include breakpoint(s) {
+          margin-right: 5px;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          border-radius: 15px;
+        }
+        
+        @media (max-width: 360px) {
+          margin-right: 3px;
+        }
+      }
+    }
+
+  }
+
+
+  // Serhii
+  .footer__logo-wrap {
+    display: flex;
+    min-width: 280px;
+    width: 280px;
+
+    @include breakpoint(m) {
+      min-width: 228px;
+      width: 228px;
+    }
+
+    @include breakpoint(s) {
+      order: 3;
+      flex: 100%;
+      margin-top: 29px;
+    }
+
+    .footer__logo {
+
+      @include breakpoint(m) {
+        width: 71px;
+      }
+      @include breakpoint(s) {
+        width: 60px;
+      }
+
+      img {
+        min-width: 100px;
+        width: 100%;
+
+        @include breakpoint(m) {
+          min-width: 71px;
+          width: 100%;
+        }
+        @include breakpoint(s) {
+          min-width: 60px;
+        }
+      }
+    }
+
+    .footer__copyright {
+      min-width: 135px;
+      padding: 20px 0 0 18px;
+      color: $color-text-light;
+      font-size: 16px;
+      line-height: 20px;
+
+      @include breakpoint(m) {
+        padding: 4px 0 0 7px;
+      }
+      @include breakpoint(s) {
+        padding: 10px 0 0 7px;
+      }
+
+    }
+  }
+
+  .footer__office, .footer__contacts {
+    a {
+      color: $color-text-light;
+    }
+  }
+
+  .footer__office {
+    min-width: 180px;
+    margin-left: -12px;
+
+    @include breakpoint(m) {
+      margin-left: 11px;
+    }
+
+    @include breakpoint(s) {
+      order: 1;
+      margin-left: 0;
+      min-width: 150px;
+    }
+  }
+
+  .footer__contacts {
+    min-width: 220px;
+    margin-left: 15px;
+
+    @include breakpoint(m) {
+      display: none;
+    }
+  }
+
+  .footer__social {
+    min-width: 272px;
+
+    @include breakpoint(s) {
+      order: 2;
+      min-width: 135px;
+    }
+
+    @media (max-width: 375px) {
+      padding-left: 0;
+    }
+
+    @media (max-width: 360px) {
+      width: 100%;
+      margin-top: 15px;
+      min-width: 280px;
+    }
+
+    .footer__title {
+      margin-left: 17px;
+      margin-bottom: 20px;
+
+      @include breakpoint(m) {
+        text-align: left;
+        margin-left: 42px;
+        margin-top: 0;
+      }
+
+      @include breakpoint(s) {
+        margin-left: 0;
+        margin-bottom: 25px;
+      }
+
+      @media (max-width: 375px) {
+        font-size: 15px;
+      }
+    }
+
+    .social {
+      margin-left: 17px;
+
+      @include breakpoint(m) {
+        margin-left: 44px;
+      }
+
+      @include breakpoint(s) {
+        margin-left: 0;
+      }
+
+      li {
+        &:nth-last-child(1) {
+          a {
+            margin-right: 0;
+          }
+        }
+
+      }
+    }
+  }
+
+  .footer__display-for-ipad {
+    display: none;
+
+    @include breakpoint(m) {
+      display: inline-block;
+    }
+  }
+
+  .footer__display-for-desc {
+    display: inline-block;
+
+    @include breakpoint(m) {
+      display: none;
+    }
+  }
+
+  .footer__display-block-mob {
+    display: inline-block;
+
+    @include breakpoint(s) {
+      display: block;
+    }
+
+    @media (max-width: 360px) {
+      display: inline-block;
+    }
+
+  }
+
+  .footer__copyright_br {
+    display: block;
+
+    @include breakpoint(s) {
+      display: inline-block;
+    }
+  }
+
+
+
+
+}

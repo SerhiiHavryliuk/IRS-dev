@@ -1,0 +1,65 @@
+{
+  "name": "frondevoPack",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "server": "node ./bin/www",
+    "watch-npm-sass": "node-sass ./dev/static/sass/ -o ./dev/static/css -w",
+    "start": "concurrently \"npm run server\"  \"npm run watch-npm-sass\"  \"gulp watch\""
+  },
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "jade": "~1.11.0",
+    "morgan": "~1.6.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "automation add CSS prefixes for build of CSS (github.com/postcss/autoprefixer)",
+    "autoprefixer": "^6.3.6",
+
+    "gulp": "automation create build of project (npmjs.com/package/gulp)",
+    "gulp": "^3.9.0",
+
+    "gulp-clean": "clean build directory (npmjs.com/package/gulp-clean)",
+    "gulp-clean": "latest",
+
+    "gulp-concat": "automation contact files for build (npmjs.com/package/gulp-concat)",
+    "gulp-concat": "^2.6.0",
+
+    "gulp-rename": "automation rename files for build (npmjs.com/package/gulp-rename)",
+    "gulp-rename": "^1.2.2",
+
+    "gulp-data": "API for attaching data to the file object. It's need for gulp-jade (npmjs.com/package/gulp-data)",
+    "gulp-data": "^1.2.1",
+
+    "gulp-jade": "compile jade templates (npmjs.com/package/gulp-jade)",
+    "gulp-jade": "~1.1.0",
+
+    "gulp-postcss": "to pipe CSS through several processors, but parse CSS only once (npmjs.com/package/gulp-postcss)",
+    "gulp-postcss": "^6.1.1",
+
+    "gulp-sass": "compile SASS files (npmjs.com/package/gulp-sass)",
+    "gulp-sass": "^2.3.1",
+
+    "gulp-uglify": "js minification (npmjs.com/package/gulp-uglify)",
+    "gulp-uglify": "^1.5.3",
+
+    "path": "for file's path organization (npmjs.com/package/path)",
+    "path": "^0.12.7",
+
+    "vinyl-ftp": "for fast ftp deploy (npmjs.com/package/vinyl-ftp)",
+    "vinyl-ftp": "^0.4.5",
+
+    "gulp-livereload": "for automatical browser updates (npmjs.com/package/gulp-livereload)",
+    "gulp-livereload": "^3.8.1",
+
+    "gulp-css-base64": "^for optimize images to data url",
+    "gulp-css-base64": "^1.3.4",
+
+    "gulp-imagemin": "for optimize images",
+    "gulp-imagemin": "^3.1.1"
+
+  }
+}

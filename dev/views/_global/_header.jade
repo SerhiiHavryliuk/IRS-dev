@@ -1,0 +1,10 @@
+header.header
+    -if(pageName == "index")
+        h1.header__logo
+         img(src="img/header/logo.png" alt="international reserve system")
+    -else
+        a.header__logo(href="/" title="на главную")
+            img(src="img/header/logo.png" alt="international reserve system")
+
+    include ../components/navigation/_menu-simple-horizontal
+

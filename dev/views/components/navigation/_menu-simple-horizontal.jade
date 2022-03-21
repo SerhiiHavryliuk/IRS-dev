@@ -1,0 +1,34 @@
+nav.main-menu
+    ul.main-menu__list
+        li.main-menu__item: a(href="#about").main-menu__link О компании
+        li.main-menu__item: a(href="#how_work").main-menu__link Как это работает?
+        li.main-menu__item: a(href="#events").main-menu__link Наши мероприятия
+        li.main-menu__item.main-menu__active: a(href="#contacts").main-menu__link Контакты
+    ul.main-menu__list-right
+
+        li.main-menu__item-lang
+            span.main-item.icon.icon_left.irs__lang(tabindex='1')
+                span.icon__t Рус
+                span.icon__p.icon__p_ru
+            ul.sub-menu
+                li
+                    a(href='#1')
+                        span.icon.icon_left
+                            span.icon__t Eng
+                            span.icon__p.icon__p_eng
+                li
+                    a(href='#2')
+                        span.icon.icon_left
+                            span.icon__t Chn
+                            span.icon__p.icon__p_chn
+                li
+                    a(href='#3')
+                        span.icon.icon_left
+                            span.icon__t Spn
+                            span.icon__p.icon__p_spn
+
+        li.main-menu__item-signin: a(href="#").button.main-menu__link-signin Вход
+
+section.layout-main-irs.irs__header
+    h1.title.irs__main-title Создавая <br> новый уровень <br> будущего
+    .irs__subtitle Начните инвестировать в свою финансовую <br> независимость сегодня

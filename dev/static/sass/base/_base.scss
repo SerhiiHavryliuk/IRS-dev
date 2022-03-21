@@ -1,0 +1,191 @@
+// =============================================================================
+// Base set of styles
+// =============================================================================
+body {
+  font-family: $font-family-default;
+  //@include font-size($font-size-text-default);
+  font-size: $font-size-20;
+  color: $color-text-default;
+  background-color: $color-bg;
+}
+
+input,
+select,
+textarea {
+  font-family: $font-family-default;
+}
+
+
+// =============================================================================
+// .text
+// =============================================================================
+.visual-editor,
+.text {
+  font-family: $font-family-default;
+  //@include font-size($font-size-text-default);
+  font-size: $font-size-20;
+  color: $color-text-default;
+}
+
+// =============================================================================
+// .title-main
+// =============================================================================
+.visual-editor h1,
+.title {
+  font-family: $font-family-titles;
+  font-size: $font-size-50;
+  //@include font-size($font-size-main-title);
+  color: $color-titles;
+  text-transform: uppercase;
+
+  margin-bottom: 30px;
+
+  @include breakpoint(m) {
+    margin-bottom: 10px;
+  }
+  @include breakpoint(s) {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 21px;
+  }
+  @media (max-width: 365px) {
+    font-size: 23px;
+  }
+}
+
+
+// =============================================================================
+// .title-secondary
+// =============================================================================
+.visual-editor h2,
+.title_secondary {
+  font-family: $font-family-titles;
+  //@include font-size($font-size-secondary-title);
+  font-size: $font-size-50;
+  color: $color-titles-secondary;
+
+  margin-bottom: 20px;
+
+  @include breakpoint(sm) {
+    margin-bottom: 10px;
+  }
+}
+
+
+// =============================================================================
+// .title-secondary
+// =============================================================================
+.visual-editor h2,
+.title_secondary {
+  font-family: $font-family-titles;
+  //@include font-size($font-size-secondary-title);
+  //color: $color-titles;
+  font-size: $font-size-50;
+  color: $color-titles-secondary;
+
+  margin-bottom: 20px;
+
+  @include breakpoint(sm) {
+    margin-bottom: 10px;
+  }
+}
+
+
+// =============================================================================
+// other visual editor titles
+// =============================================================================
+.visual-editor h3,
+.visual-editor h4,
+.visual-editor h5,
+.visual-editor h6 {
+  font-family: $font-family-titles;
+  color: $color-titles;
+  font-size: $font-size-20;
+
+  margin-bottom: 15px;
+}
+
+// =============================================================================
+// .link
+// =============================================================================
+
+.visual-editor a,
+.link {
+  color: $color-link-default;
+  text-decoration: none;
+
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    color: $color-link-default-hover;
+  }
+}
+
+
+// =============================================================================
+// visual editor text blocks
+// =============================================================================
+.visual-editor p,
+.visual-editor div {
+  margin-bottom: 20px;
+}
+
+
+// =============================================================================
+// visual editor lists
+// =============================================================================
+.visual-editor ul,
+.visual-editor ol {
+  margin: 0 15px 10px 25px;
+}
+
+.visual-editor ul {
+  list-style: disc;
+  li {
+    list-style-type: disc;
+  }
+}
+
+.visual-editor ol li {
+  list-style-type: decimal;
+}
+
+.visual-editor ul ul,
+.visual-editor ol ol {
+  margin: 0 15px 10px 25px;
+}
+
+.visual-editor li {
+  margin-bottom: 10px;
+}
+
+
+// =============================================================================
+// visual editor tables
+// =============================================================================
+.visual-editor table {
+  margin-bottom: 15px;
+  border: 1px solid $color-controls-border;
+  width: auto;
+}
+.visual-editor td,
+.visual-editor th {
+  padding: 4px;
+  border: 1px solid $color-controls-border;
+  text-align: left;
+}
+.visual-editor th {
+  font-weight: bold;
+}
+
+
+// =============================================================================
+// visual editor others
+// =============================================================================
+.visual-editor strong {
+  font-weight: bold;
+}
+.visual-editor em {
+  font-style: italic;
+}

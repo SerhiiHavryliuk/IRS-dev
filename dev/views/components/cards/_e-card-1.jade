@@ -1,0 +1,25 @@
+// -------------------------------------
+// simple e-commerce card
+// details about variables
+// productName  - name of product
+// picDesktop   - photo preview for desktop (for example)
+// picMobile    - photo preview for mobile (for example)
+// labelText    - text for label (sale, new etc)
+// labelClass   - class for label view. Пул классов определяем в e-card-1.scss
+// href         - link to product page
+// price
+// oldPrice
+// desc         - short description
+// basketText   - text in the button
+// -------------------------------------
+mixin e-card-1(data)
+    .e-card-1
+        a(href=data.href)
+            span.e-card-1__pic.e-card-1__pic_m(style="background-image: url("+ data.picDesktop +"")
+            span.e-card-1__pic.e-card-1__pic_xs-s(style="background-image: url("+ data.picMobile +"")
+            span(class="e-card-1__label e-card-1__label_#{data.labelClass}")= data.labelText
+            span.e-card-1__title= data.productName
+        .e-card-1__desc= data.desc
+        span.e-card-1__price= data.price
+        span.e-card-1__oldPrice= data.oldPrice
+        .button= data.buttonText

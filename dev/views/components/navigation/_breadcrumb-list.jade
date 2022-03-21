@@ -1,0 +1,13 @@
+ol.breadcrumblist(itemscope, itemtype="http://schema.org/BreadcrumbList")
+    li.breadcrumblist__item(itemprop="itemListElement", itemscope, itemtype="http://schema.org/ListItem")
+        a.link(itemscope, itemtype="http://schema.org/Thing", itemprop="item", href="#")
+            span(itemprop="name") Books
+        meta(itemprop="position", content="1")
+    li.breadcrumblist__item(itemprop="itemListElement", itemscope, itemtype="http://schema.org/ListItem")
+        a.link(itemscope, itemtype="http://schema.org/Thing", itemprop="item", href="#")
+            span(itemprop="name") Science Fiction
+        meta(itemprop="position", content="2")
+    li.breadcrumblist__item(itemprop="itemListElement", itemscope, itemtype="http://schema.org/ListItem")
+        span.breadcrumblist__active(itemscope, itemtype="http://schema.org/Thing", itemprop="item")
+            span(itemprop="name") Ancillary Justice
+        meta(itemprop="position", content="3")

@@ -1,0 +1,19 @@
+{
+    "demo/global-setup/vars": {},
+    "demo/global-setup/typography": {},
+    "demo/global-setup/layout": {},
+    "demo/global-setup/base-styles": {},
+    "demo/forms/basic": {},
+    "demo/forms/layouts": {},
+    "demo/cards/ecommerce": {},
+    "demo/cards/text": {},
+    "demo/navigation/simple": {},
+    "demo/navigation/footer": {},
+    "demo/navigation/menu": {},
+
+    "components": {},
+    "index": {},
+    "registration": {},
+    "login": {},
+    "recovery": {}
+}
